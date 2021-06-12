@@ -1,0 +1,42 @@
+.Info {
+  width: 70%;
+  display: flex;
+  margin: 0 auto;
+  &__title {
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 1.2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    span {
+      color: #599921;
+    }
+    button {
+      display: block;
+      color: #fff;
+      background: #599921;
+      border: 2px solid #599921;
+      border-radius: 6px;
+      padding: 18px 30px;
+      transition: 0.3s;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      cursor: pointer;
+      margin-top: 20px;
+      &:hover{
+        background: #fff;
+        color: #599921;
+      }
+    }
+  }
+  &__banner {
+    img {
+      width: 515px;
+      height: 420px;
+    }
+  }
+}
