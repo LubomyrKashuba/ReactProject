@@ -1,11 +1,12 @@
 .Card {
   width: 300px;
   height: 470px;
-  padding: 0 15px;
+  padding: 10px 15px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin: 5px;
 
   &:hover {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
@@ -26,6 +27,7 @@
     justify-content: space-between;
     font-size: 18px;
     font-weight: 500;
+    text-align: left;
     div:first-child:hover {
       color: #599921;
     }
@@ -39,5 +41,6 @@
     overflow: hidden;
     font-size: 15px;
     color: #6d6d6d;
+    text-align: left;
   }
 }
