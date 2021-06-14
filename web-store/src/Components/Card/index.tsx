@@ -2,19 +2,21 @@ import React from "react";
 
 import "./Card.scss";
 
-interface cardProps {
+export interface cardProps {
+  id?: number;
   img: string;
   title: string;
   description: string;
+  price: number;
 }
-function Card() {
+function Card({img,title,description,price}:cardProps) {
   return (
     <div className="Card">
         <button></button>
-      <div className="Card__img"><img  alt="Яйця з хрустким беконом та бурячковим айолі" src="https://www.tomatina.ua/wp-content/uploads/2021/02/yajczya-benedykt-z-hrustkym-bekonom-ta-buryachkovym-ajoli-350x350.png" /></div>
-      <div className="Card__title"><div>Яйця з хрустким беконом та бурячковим айолі</div>
-      <div>109</div></div>
-      <div className="Card__description">ОБЕРІТЬ У ДОДАТКАХ СПОСІБ ПРИГОТУВАННЯ ЯЄЦЬ  Варені яйця/скрембл/яєчня, хрусткий бекон, хумус власного виробництва, припущені на вогні помідори чері, пряне броколі, халумі, салат мікс, боби едамаме, оливкова олія, орегано, сушена цибуля, мікрогрін, паприка шматочками, кунжут, соус бурячковий айолі</div>
+      <div className="Card__img"><img  alt="" src={img} /></div>
+      <div className="Card__title"><div>{title}</div>
+      <div>{price}</div></div>
+      <div className="Card__description">{description}</div>
     </div>
   );
 }
