@@ -5,7 +5,7 @@ import Products from "./Components/Products";
 import { breakfast } from "./data/data";
 import Sidebar from "./Components/Header/Sidebar/Sidebar";
 import Header from "./Components/Header/Header";
-
+import Footer from "./Components/Footer/Footer";
 import "./App.css";
 
 function App() {
@@ -19,6 +19,7 @@ function App() {
       <Info />
       <Menu />
       <Products items={breakfast} />
+      <Footer></Footer>
     </div>
   );
 }

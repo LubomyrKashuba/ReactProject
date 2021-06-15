@@ -1,5 +1,6 @@
 import React from "react";
 import Sidebar from "./Sidebar/Sidebar";
+import AcUnitIcon from '@material-ui/icons/AcUnit';
 
 
 import "./Header.scss";
@@ -24,7 +25,7 @@ function Header({ onClick }: any) {
         <div className="right">
           <div className="right-left">ЗАЛИШИТИ ВіДГУК</div>
           <div>
-            <button id="likeButton">❤</button>
+            <button id="likeButton"><AcUnitIcon /></button>
           </div>
           <div className="right-center">
             <button id="phoneButton">phone </button>
