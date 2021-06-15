@@ -3,7 +3,7 @@ import "./Sidebar.scss";
 
 function Sidebar({ onClick, active }: any) {
   return (
-    <div className={active ? "sidebar active" : "sidebar"}>
+    <div className={active ? "sidebar sidebar__active" : "sidebar"}>
       <span>
         <button onClick={onClick}>×</button>
       </span>

@@ -3,17 +3,40 @@ import Button from "./Menu-button";
 
 import "./Menu.scss";
 
-const Menu = () => {
-  const [active, setActive] = React.useState(0);
-  
+interface menuProps {
+  active: number;
+}
+const Menu = ({ active }: menuProps) => {
+
   const menu = [
-    "сніданки до 12:00",
-    "сaлати пасти",
-    "салати",
-    "фіт сендвічі",
-    "супи",
-    "десерти",
-    "напої",
+    {
+      title: "сніданки",
+      path: "/",
+    },
+    {
+      title: "сaлати пасти",
+      path: "/pasta",
+    },
+    {
+      title: "салати",
+      path: "/salad",
+    },
+    {
+      title: "фіт сендвічі",
+      path: "/sandwich",
+    },
+    {
+      title: "супи",
+      path: "/soup",
+    },
+    {
+      title: "десерти",
+      path: "/dessert",
+    },
+    {
+      title: "напої",
+      path: "/drinks",
+    },
   ];
 
   return (
@@ -26,9 +49,9 @@ const Menu = () => {
           return (
             <li key={index}>
               <Button
-                title={item}
+                title={item.title}
                 active={active === index ? "active" : ""}
-                onClick={() => setActive(index)}
+                path={item.path}
               ></Button>
             </li>
           );
