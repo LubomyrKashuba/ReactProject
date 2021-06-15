@@ -2,7 +2,7 @@
   position: absolute;
   width: 400px;
   right: -400px;
-  height: 940px;
+  height: 100vh;
   transition: 0.3s;
   background-image: url(https://www.tomatina.ua/wp-content/themes/tomatina/img/icons/menu_decor.svg);
   background-repeat: no-repeat;
@@ -49,7 +49,8 @@
     cursor: pointer;
   }
 }
-.active {
+.sidebar__active {
+  position: fixed;
   right: 0px;
   top: 0px;
 }

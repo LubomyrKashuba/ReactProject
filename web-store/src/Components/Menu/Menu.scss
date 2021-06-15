@@ -19,6 +19,7 @@
     border-radius: 6px;
     padding: 3px;
     li {
+      padding:10px 0;
       list-style-type: none;
       &:not(:first-child) {
         margin-left: 5px;

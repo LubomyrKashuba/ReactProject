@@ -1,18 +1,19 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "./Button.scss";
 
 interface buttonProps {
   title: string;
   active: string;
-  onClick: () => void;
+  path: string;
 }
-const Button = ({ title, active, onClick }: buttonProps) => {
+const Button = ({ title, active, path }: buttonProps) => {
   return (
-    <div>
-      <button className={active} onClick={onClick}>
+    <div className="Menu__Button">
+      <Link className={active} to={path}>
         {title}
-      </button>
+      </Link>
     </div>
   );
 };
