@@ -8,10 +8,21 @@ import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { cardProps } from "./Components/Card";
 
 function App() {
   const [sidebar, setSidebar] = React.useState(false);
 
+  interface StateRoot {
+    breakfast: cardProps[];
+    pasta: cardProps[];
+    salad: cardProps[];
+
+  }
+  const store = useSelector((state: StateRoot) => {
+    return state;
+  });
   return (
     <Router>
       <div className="App">
@@ -21,12 +32,16 @@ function App() {
           <Route exact path="/">
             <Info />
             <Menu active={0} />
-            <Products items={breakfast} />
+            <Products items={store.breakfast} />
           </Route>
           <Route path="/pasta">
             <Info />
             <Menu active={1} />
-            <Products items={pasta} />
+            <Products items={store.salad} />
+          </Route> <Route path="/salad">
+            <Info />
+            <Menu active={2} />
+            <Products items={store.pasta} />
           </Route>
         </Switch>
         <Footer></Footer>

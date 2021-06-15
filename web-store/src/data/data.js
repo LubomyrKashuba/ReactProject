@@ -147,7 +147,7 @@ export let pasta = [
     price: 109,
   },
 ];
-export let salat = [
+export let salad = [
   {
     id: 19,
     img: "https://www.tomatina.ua/wp-content/uploads/2021/06/z-kurkoyu-ta-polunyczeyu-sajt-350x350.png",
