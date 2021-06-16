@@ -12,6 +12,7 @@ const Products = ({ items }: productsProps) => {
       {items.map((item: cardProps) => {
         return (
           <Card
+            key={item.id}
             img={item.img}
             title={item.title}
             description={item.description}
