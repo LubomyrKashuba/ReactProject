@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
-import { breakfast, pasta,salad } from "./data/data";
+import { breakfast, pasta, salad, sandwich, soup, dessert, drink } from "./data/data";
 import { createStore } from "redux";
 
 interface ActionType {
@@ -16,7 +16,11 @@ function counterReducer(
   state = {
     breakfast,
     pasta,
-    salad
+    salad,
+    sandwich,
+    soup,
+    dessert,
+    drink
   },
   action: ActionType
 ) {
