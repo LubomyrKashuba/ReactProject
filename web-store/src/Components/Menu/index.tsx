@@ -35,7 +35,7 @@ const Menu = ({ active }: menuProps) => {
     },
     {
       title: "напої",
-      path: "/drinks",
+      path: "/drink",
     },
   ];
 
