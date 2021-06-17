@@ -1,0 +1,27 @@
+.AboutUs {
+  margin: 50px auto;
+  width: 90%;
+}
+.head {
+  margin: 50px;
+  display: flex;
+  justify-content: center;
+  .head__tom {
+    color: #599921;
+  }
+}
+.AboutUs__content {
+  display: flex;
+  justify-content: space-between;
+
+  .content__text {
+    margin: 50px auto;
+    width: 50%;
+  }
+  .content__img {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

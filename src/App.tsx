@@ -8,6 +8,7 @@ import Footer from "./Components/Footer/Footer";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { cardProps } from "./Components/Card";
+import AboutUs from "./Components/AboutTomatina/index"
 
 import "./App.css";
 
@@ -63,8 +64,10 @@ function App() {
           </Route>
         </Switch>
         <Footer></Footer>
+        <AboutUs></AboutUs>
       </div>
     </Router>
+
   );
 }
 
