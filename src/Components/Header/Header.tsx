@@ -1,8 +1,8 @@
 import React from "react";
-import AcUnitIcon from '@material-ui/icons/AcUnit';
-
+import AcUnitIcon from "@material-ui/icons/AcUnit";
 
 import "./Header.scss";
+import MenuHover from "./Menu/MunuHover";
 
 function Header({ onClick }: any) {
   return (
@@ -16,7 +16,10 @@ function Header({ onClick }: any) {
         </div>
         <div className="center">
           <ul className="center-ul">
-            <li>МЕНЮ</li>
+            <li className="MenuButtonHeader">
+              МЕНЮ
+              <MenuHover />
+            </li>
             <li>ЗБЕРИ САМ</li>
             <li>ДОСТАВКА</li>
           </ul>
@@ -24,7 +27,9 @@ function Header({ onClick }: any) {
         <div className="right">
           <div className="right-left">ЗАЛИШИТИ ВіДГУК</div>
           <div>
-            <button id="likeButton"><AcUnitIcon /></button>
+            <button id="likeButton">
+              <AcUnitIcon />
+            </button>
           </div>
           <div className="right-center">
             <button id="phoneButton">phone </button>

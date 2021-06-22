@@ -1,0 +1,17 @@
+.ButtonHeader {
+  position: relative;
+
+  .button-icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+  path {
+    background-color: rgb(89, 153, 33);
+  }
+  svg{
+    background-color: rgb(89, 153, 33);
+  }
+}
