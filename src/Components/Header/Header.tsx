@@ -3,16 +3,19 @@ import AcUnitIcon from "@material-ui/icons/AcUnit";
 
 import "./Header.scss";
 import MenuHover from "./Menu/MunuHover";
+import { Link } from "react-router-dom";
 
 function Header({ onClick }: any) {
+  
   return (
     <div className="Header">
       <header>
         <div className="logo">
+          <Link to='/'>
           <img
             src="https://www.tomatina.ua/wp-content/uploads/2020/10/logo_one-1.svg"
             alt="Tomatina"
-          />
+          /></Link>
         </div>
         <div className="center">
           <ul className="center-ul">

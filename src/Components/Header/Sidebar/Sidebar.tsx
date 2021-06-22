@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Sidebar.scss";
 
 function Sidebar({ onClick, active }: any) {
@@ -7,7 +8,7 @@ function Sidebar({ onClick, active }: any) {
       <span>
         <button onClick={onClick}>×</button>
       </span>
-      <div>ПРО ТОМАТІНУ</div>
+        <Link to="/about">ПРО ТОМАТІНУ</Link>
       <div>ЗБЕРИ САМ</div>
       <div>ДОСТАВКА</div>
       <div>ВАКАНСІЇ</div>

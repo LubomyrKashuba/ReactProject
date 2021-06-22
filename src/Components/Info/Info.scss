@@ -12,7 +12,10 @@
     span {
       color: #599921;
     }
-    button {
+    a {
+      display: block;
+      width: 110px;
+      text-decoration: none;
       color: #fff;
       background: #599921;
       border: 2px solid #599921;
@@ -26,7 +29,7 @@
       text-transform: uppercase;
       cursor: pointer;
       margin-top: 20px;
-      &:hover{
+      &:hover {
         background: #fff;
         color: #599921;
       }
