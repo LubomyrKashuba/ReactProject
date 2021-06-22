@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "./Info.scss";
 
@@ -9,7 +10,7 @@ const Info = () => {
         <div>
           <span>Найсалатніша </span>
           доставка у будь-який куточок Львова та передмістя
-          <button>детальніше</button>
+          <Link to='/about'>детальніше</Link>
         </div>
         
       </div>

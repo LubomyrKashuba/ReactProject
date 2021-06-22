@@ -2,13 +2,14 @@
   position: absolute;
   width: 400px;
   right: -400px;
+  top: 0px;
   height: 100vh;
   transition: 0.3s;
   background-image: url(https://www.tomatina.ua/wp-content/themes/tomatina/img/icons/menu_decor.svg);
   background-repeat: no-repeat;
   background-position: bottom;
   background-color: white;
-  // display: none;
+  z-index: 8;
 
   span {
     padding: 20px;
@@ -23,7 +24,8 @@
     font-size: 40px;
     color: rgb(126, 126, 126);
   }
-  div {
+  a {
+    text-decoration: none;
     color: grey;
     height: 50px;
     width: 190px;
@@ -35,7 +37,7 @@
     font-weight: 500;
     cursor: pointer;
   }
-  div:hover {
+  a:hover {
     height: 50px;
     width: 190px;
     margin: 20px 50px;
@@ -51,6 +53,7 @@
 }
 .sidebar__active {
   position: fixed;
+  z-index: 8;
   right: 0px;
   top: 0px;
 }

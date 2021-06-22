@@ -20,7 +20,8 @@ function counterReducer(
     sandwich,
     soup,
     dessert,
-    drink
+    drink,
+    orderedProducts: []
   },
   action: ActionType
 ) {
