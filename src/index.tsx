@@ -1,15 +1,23 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./App";
+import App, { orderedProductsInterface } from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
-import { breakfast, pasta, salad, sandwich, soup, dessert, drink } from "./data/data";
 import { createStore } from "redux";
+import {
+  breakfast,
+  pasta,
+  salad,
+  sandwich,
+  soup,
+  dessert,
+  drink,
+} from "./data/data";
 
 interface ActionType {
   type: string;
-  value: string;
+  payload: never;
 }
 
 function counterReducer(
@@ -21,17 +29,25 @@ function counterReducer(
     soup,
     dessert,
     drink,
-    orderedProducts: []
+    orderedProducts: [],
   },
   action: ActionType
 ) {
   switch (action.type) {
-    // case "filterUsers":
-    //   return { users: state.users.filter((item) => item.id > 5) };
+    case "addTOBasket":
+      return {
+        ...state,
+        orderedProducts: [...state.orderedProducts, action.payload],
+      };
     default:
       return state;
   }
 }
+
+export const addToBasket = (add: orderedProductsInterface) => ({
+  type: "addTOBasket",
+  payload: add,
+});
 
 const store = createStore(counterReducer);
 

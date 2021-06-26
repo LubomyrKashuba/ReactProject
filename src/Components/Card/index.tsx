@@ -1,20 +1,27 @@
 import React from "react";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import FavoriteIcon from "@material-ui/icons/Favorite";
+import { useDispatch } from "react-redux";
 
 import "./Card.scss";
+import { addToBasket } from "../..";
 
 export interface cardProps {
-  id?: number;
+  id: number;
   img: string;
   title: string;
   description: string;
   price: number;
 }
-function Card({ img, title, description, price }: cardProps) {
+function Card(props: cardProps) {
   const [favorite, setFavorite] = React.useState(true);
   const [count, setCount] = React.useState(1);
 
+  const dispatch = useDispatch();
+
+  const handleBasket = () => {
+    dispatch(addToBasket({ product: { ...props }, count }));
+  };
   return (
     <div className="Card">
       <div className="Card__favorite" onClick={() => setFavorite(!favorite)}>
@@ -25,13 +32,13 @@ function Card({ img, title, description, price }: cardProps) {
         )}
       </div>
       <div className="Card__img">
-        <img alt="" src={img} />
+        <img alt="" src={props.img} />
       </div>
       <div className="Card__title">
-        <div>{title}</div>
-        <div>{price}</div>
+        <div>{props.title}</div>
+        <div>{props.price}</div>
       </div>
-      <div className="Card__description">{description}</div>
+      <div className="Card__description">{props.description}</div>
       <div className="Card__controls">
         <div>
           <button
@@ -45,7 +52,7 @@ function Card({ img, title, description, price }: cardProps) {
             +
           </button>
         </div>
-        <button>замовити</button>
+        <button onClick={handleBasket}>замовити</button>
       </div>
     </div>
   );
