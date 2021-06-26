@@ -11,26 +11,48 @@ import { cardProps } from "./Components/Card";
 import AboutUs from "./Components/AboutTomatina/index";
 
 import "./App.css";
+import CartButton from "./Components/Cart/Cart-button";
+
+export interface orderedProductsInterface {
+  product: cardProps;
+  count: number;
+}
+
+interface StateRoot {
+  breakfast: cardProps[];
+  pasta: cardProps[];
+  salad: cardProps[];
+  sandwich: cardProps[];
+  soup: cardProps[];
+  dessert: cardProps[];
+  drink: cardProps[];
+  orderedProducts: orderedProductsInterface[];
+}
 
 function App() {
   const [sidebar, setSidebar] = React.useState(false);
 
-  interface StateRoot {
-    breakfast: cardProps[];
-    pasta: cardProps[];
-    salad: cardProps[];
-    sandwich: cardProps[];
-    soup: cardProps[];
-    dessert: cardProps[];
-    drink: cardProps[];
-  }
   const store = useSelector((state: StateRoot) => {
     return state;
   });
+
+  const openCart = () => {
+    console.log(store.orderedProducts);
+  };
   return (
     <Router>
       <Sidebar active={sidebar} onClick={() => setSidebar(false)} />
       <Header onClick={() => setSidebar(true)} />
+      <CartButton
+        onClick={openCart} //!!
+        className={
+          store.orderedProducts.length === 0
+            ? "CartButton"
+            : "CartButton open-cart"
+        }
+        count={store.orderedProducts.length} //!!
+        totalPrice={0} //!!
+      />
       <div className="App">
         <Switch>
           <Route exact path="/">
