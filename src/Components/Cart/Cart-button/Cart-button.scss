@@ -1,6 +1,5 @@
 .CartButton {
-  position: none;
-  display: block;
+  position: fixed;
   top: 165px;
   right: 20px;
   width: 120px;
@@ -13,7 +12,7 @@
   cursor: pointer;
   opacity: 1;
   transition: all 0.5s;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   & > img {
@@ -65,5 +64,5 @@
   }
 }
 .open-cart{
-  position: fixed;
+  display: flex;
 }

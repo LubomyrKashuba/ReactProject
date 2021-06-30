@@ -2,9 +2,10 @@ import React from "react";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import { useDispatch } from "react-redux";
+import { addToBasket } from "../..";
 
 import "./Card.scss";
-import { addToBasket } from "../..";
+
 
 export interface cardProps {
   id: number;
