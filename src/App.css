@@ -4,3 +4,6 @@
   position: relative;
   margin-top: 150px;
 }
+.disabled{
+  position: fixed;
+}

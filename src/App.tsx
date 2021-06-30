@@ -12,13 +12,14 @@ import AboutUs from "./Components/AboutTomatina/index";
 
 import "./App.css";
 import CartButton from "./Components/Cart/Cart-button";
+import CartSidebar from "./Components/Cart/Cart-sidebar";
 
 export interface orderedProductsInterface {
   product: cardProps;
   count: number;
 }
 
-interface StateRoot {
+export interface StateRoot {
   breakfast: cardProps[];
   pasta: cardProps[];
   salad: cardProps[];
@@ -31,18 +32,18 @@ interface StateRoot {
 
 function App() {
   const [sidebar, setSidebar] = React.useState(false);
+  const [cart, setCart] = React.useState(true);
 
   const store = useSelector((state: StateRoot) => {
     return state;
   });
 
   const openCart = () => {
-    console.log(store.orderedProducts);
+    setCart(!cart);
   };
+
   return (
     <Router>
-      <Sidebar active={sidebar} onClick={() => setSidebar(false)} />
-      <Header onClick={() => setSidebar(true)} />
       <CartButton
         onClick={openCart} //!!
         className={
@@ -50,10 +51,27 @@ function App() {
             ? "CartButton"
             : "CartButton open-cart"
         }
-        count={store.orderedProducts.length} //!!
-        totalPrice={0} //!!
+        count={store.orderedProducts.reduce(
+          (acc: number, cur: orderedProductsInterface) => {
+            return acc + cur.count;
+          },
+          0
+        )}
+        totalPrice={store.orderedProducts.reduce(
+          (acc: number, cur: orderedProductsInterface) => {
+            return acc + cur.product.price * cur.count;
+          },
+          0
+        )}
       />
-      <div className="App">
+      <CartSidebar
+        closeCart={() => setCart(!cart)}
+        className={cart ? "CartSidebar" : "CartSidebar open"}
+        blur={!cart ? "blur" : ""}
+      />
+      <div className={cart ? "App" : "App disabled"}>
+        <Sidebar active={sidebar} onClick={() => setSidebar(false)} />
+        <Header onClick={() => setSidebar(true)} />
         <Switch>
           <Route exact path="/">
             <Info />
