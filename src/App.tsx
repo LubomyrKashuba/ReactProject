@@ -1,18 +1,21 @@
 import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { useEffect } from "react";
+
 import Info from "./Components/Info";
 import Menu from "./Components/Menu";
 import Products from "./Components/Products";
 import Sidebar from "./Components/Header/Sidebar/Sidebar";
 import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { useSelector } from "react-redux";
 import { cardProps } from "./Components/Card";
 import AboutUs from "./Components/AboutTomatina/index";
-
-import "./App.css";
 import CartButton from "./Components/Cart/Cart-button";
 import CartSidebar from "./Components/Cart/Cart-sidebar";
+import CartPage from "./Components/Cart/Cart-page";
+
+import "./App.css";
 
 export interface orderedProductsInterface {
   product: cardProps;
@@ -38,34 +41,14 @@ function App() {
     return state;
   });
 
-  const openCart = () => {
+  const useCartSidebar = () => {
     setCart(!cart);
   };
 
   return (
     <Router>
-      <CartButton
-        onClick={openCart} //!!
-        className={
-          store.orderedProducts.length === 0
-            ? "CartButton"
-            : "CartButton open-cart"
-        }
-        count={store.orderedProducts.reduce(
-          (acc: number, cur: orderedProductsInterface) => {
-            return acc + cur.count;
-          },
-          0
-        )}
-        totalPrice={store.orderedProducts.reduce(
-          (acc: number, cur: orderedProductsInterface) => {
-            return acc + cur.product.price * cur.count;
-          },
-          0
-        )}
-      />
       <CartSidebar
-        closeCart={() => setCart(!cart)}
+        closeCart={useCartSidebar}
         className={cart ? "CartSidebar" : "CartSidebar open"}
         blur={!cart ? "blur" : ""}
       />
@@ -74,42 +57,53 @@ function App() {
         <Header onClick={() => setSidebar(true)} />
         <Switch>
           <Route exact path="/">
+            <CartButton onClick={useCartSidebar} />
             <Info />
             <Menu active={0} />
             <Products items={store.breakfast} />
           </Route>
           <Route path="/pasta">
+            <CartButton onClick={useCartSidebar} />
             <Info />
             <Menu active={1} />
             <Products items={store.salad} />
           </Route>{" "}
           <Route path="/salad">
+            <CartButton onClick={useCartSidebar} />
             <Info />
             <Menu active={2} />
             <Products items={store.pasta} />
           </Route>
           <Route path="/sandwich">
+            <CartButton onClick={useCartSidebar} />
             <Info />
             <Menu active={3} />
             <Products items={store.sandwich} />
           </Route>
           <Route path="/soup">
+            <CartButton onClick={useCartSidebar} />
             <Info />
             <Menu active={4} />
             <Products items={store.soup} />
           </Route>
           <Route path="/dessert">
+            <CartButton onClick={useCartSidebar} />
             <Info />
             <Menu active={5} />
             <Products items={store.dessert} />
           </Route>
           <Route path="/drink">
+            <CartButton onClick={useCartSidebar} />
             <Info />
             <Menu active={6} />
             <Products items={store.drink} />
           </Route>
           <Route path="/about">
+            <CartButton onClick={useCartSidebar} />
             <AboutUs />
+          </Route>
+          <Route path="/basket">
+            <CartPage />
           </Route>
         </Switch>
         <Footer></Footer>

@@ -6,7 +6,6 @@ import { addToBasket } from "../..";
 
 import "./Card.scss";
 
-
 export interface cardProps {
   id: number;
   img: string;
