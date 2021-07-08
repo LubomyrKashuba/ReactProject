@@ -1,22 +1,27 @@
 import React from "react";
+import { useSelector } from "react-redux";
+import { orderedProductsInterface, StateRoot } from "../../../App";
 
 import "./Cart-button.scss";
 
 interface CartButtonProps {
   onClick: () => void;
-  className: string;
-  count: number;
-  totalPrice: number;
 }
 
-const CartButton = ({
-  onClick,
-  className,
-  count,
-  totalPrice,
-}: CartButtonProps) => {
+const CartButton = ({ onClick }: CartButtonProps) => {
+  const store = useSelector((state: StateRoot) => {
+    return state;
+  });
+
   return (
-    <div className={className} onClick={onClick}>
+    <div
+      className={
+        store.orderedProducts.length === 0
+          ? "CartButton"
+          : "CartButton open-cart"
+      }
+      onClick={onClick}
+    >
       <img
         src="https://www.tomatina.ua/wp-content/themes/tomatina/img/icons/basket_green.svg"
         alt=" "
@@ -26,10 +31,24 @@ const CartButton = ({
           src="https://www.tomatina.ua/wp-content/themes/tomatina/img/icons/basket.svg"
           alt="  "
         />
-        <span>{count}</span>
+        <span>
+          {store.orderedProducts.reduce(
+            (acc: number, cur: orderedProductsInterface) => {
+              return acc + cur.count;
+            },
+            0
+          )}
+        </span>
       </div>
       <div className="CartButton__price">
-        <p>{totalPrice}</p>
+        <p>
+          {store.orderedProducts.reduce(
+            (acc: number, cur: orderedProductsInterface) => {
+              return acc + cur.product.price * cur.count;
+            },
+            0
+          )}
+        </p>
         <span>грн</span>
       </div>
     </div>

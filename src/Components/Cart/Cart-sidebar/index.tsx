@@ -2,49 +2,43 @@ import React from "react";
 import { Link } from "react-router-dom";
 import CartItem from "../Cart-item";
 import CloseIcon from "@material-ui/icons/Close";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { StateRoot } from "../../../App";
+import { clearBasket, removeFromBasket } from "../../..";
 
 import "./Cart-sidebar.scss";
 
 interface CartSidebarProps {
   className: string;
   closeCart: () => void;
-  blur:string;
+  blur: string;
 }
-const CartSidebar = ({ className, closeCart,blur }: CartSidebarProps) => {
+const CartSidebar = ({ className, closeCart, blur }: CartSidebarProps) => {
   const store = useSelector((state: StateRoot) => {
     return state;
   });
 
-  let filteredBasked: any = [];
-  let check = true;
-  store.orderedProducts.forEach((item, i, arr) => {
-    filteredBasked.forEach((subItem: any) => {
-      if (subItem.product.id === item.product.id) {
-        // subItem.count +=item.count
-        check = false;
-        // console.log(subItem.count, item.count)
-      } else {
-        check = true;
-      }
-    });
-    if (check) {
-      filteredBasked.push(item);
-    }
-  });
+  const dispatch = useDispatch();
 
-  console.log(filteredBasked);
+  let totalPrice = 0;
+  console.log(store.orderedProducts);
+
   return (
     <div className={blur} onClick={closeCart}>
-      <div className={className}>
+      <div className={className} onClick={(e) => e.stopPropagation()}>
         <div className="CartSidebar__header">
           <div className="title">Кошик</div>
-          <button className="clear-basket">очистити кошик</button>
+          <button
+            className="clear-basket"
+            onClick={() => dispatch(clearBasket())}
+          >
+            очистити кошик
+          </button>
         </div>
         <div className="CartSidebar__main">
           <div className="items">
-            {filteredBasked.map((item: any) => {
+            {store.orderedProducts.map((item: any) => {
+              totalPrice += item.product.price * item.count;
               return (
                 <CartItem
                   key={item.product.id}
@@ -52,15 +46,18 @@ const CartSidebar = ({ className, closeCart,blur }: CartSidebarProps) => {
                   title={item.product.title}
                   price={item.product.price}
                   amount={item.count}
+                  remove={() => dispatch(removeFromBasket(item.product.id))}
                 />
               );
             })}
           </div>
           <div className="footer">
             <div className="totalPrice">
-              Сума <b>0</b> грн
+              Сума <b>{totalPrice}</b> грн
             </div>
-            <Link to="/basket">оформити замовлення</Link>
+            <Link to="/basket" onClick={closeCart}>
+              оформити замовлення
+            </Link>
           </div>
         </div>
         <button>

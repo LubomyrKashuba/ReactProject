@@ -7,18 +7,16 @@ import "./Cart-item.scss";
 interface CartItemProps {
   title: string;
   img: string;
-  price:number;
-  amount:number;
+  price: number;
+  amount: number;
+  remove: () => {};
 }
-const CartItem = ({ img, title,price,amount }:CartItemProps) => {
+const CartItem = ({ img, title, price, amount, remove }: CartItemProps) => {
   const [count, setCount] = React.useState(amount);
   return (
     <div className="CartItem">
       <Link to="">
-        <img
-          src={img}
-          alt=""
-        />
+        <img src={img} alt="" />
       </Link>
       <div className="CartItem__desc">
         <Link to="">{title}</Link>
@@ -35,11 +33,11 @@ const CartItem = ({ img, title,price,amount }:CartItemProps) => {
           </button>
         </div>
         <div className="price">
-          <b>{price}</b> {/*!!! */}
+          <b>{price * count}</b>
           грн
         </div>
       </div>
-      <button className="CartItem__remove">
+      <button className="CartItem__remove" onClick={remove}>
         <CloseIcon color="action" />
       </button>
     </div>
