@@ -1,21 +1,22 @@
 import React from "react";
-import AcUnitIcon from "@material-ui/icons/AcUnit";
+import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 
 import "./Header.scss";
 import MenuHover from "./Menu/MunuHover";
 import { Link } from "react-router-dom";
+import ButtonHeader from "./ButtonHeader/Index";
 
 function Header({ onClick }: any) {
-  
   return (
     <div className="Header">
       <header>
         <div className="logo">
-          <Link to='/'>
-          <img
-            src="https://www.tomatina.ua/wp-content/uploads/2020/10/logo_one-1.svg"
-            alt="Tomatina"
-          /></Link>
+          <Link to="/">
+            <img
+              src="https://www.tomatina.ua/wp-content/uploads/2020/10/logo_one-1.svg"
+              alt="Tomatina"
+            />
+          </Link>
         </div>
         <div className="center">
           <ul className="center-ul">
@@ -23,17 +24,15 @@ function Header({ onClick }: any) {
               МЕНЮ
               <MenuHover />
             </li>
-            <li>ЗБЕРИ САМ</li>
+            <li>ВАКАНCІЇ</li>
             <li>ДОСТАВКА</li>
           </ul>
         </div>
         <div className="right">
           <div className="right-left">ЗАЛИШИТИ ВіДГУК</div>
-          <div>
-            <button id="likeButton">
-              <AcUnitIcon />
-            </button>
-          </div>
+          <ButtonHeader
+            icons={<FavoriteBorderIcon />}
+          ></ButtonHeader>
           <div className="right-center">
             <button id="phoneButton">phone </button>
             <div>

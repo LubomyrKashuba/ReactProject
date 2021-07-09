@@ -8,11 +8,11 @@ function Sidebar({ onClick, active }: any) {
       <span>
         <button onClick={onClick}>×</button>
       </span>
-        <Link to="/about">ПРО ТОМАТІНУ</Link>
-      <div>ЗБЕРИ САМ</div>
-      <div>ДОСТАВКА</div>
-      <div>ВАКАНСІЇ</div>
-      <div>КОНТАКТИ</div>
+      <Link to="/about">ПРО ТОМАТІНУ</Link>
+      <Link to="/delivery">ДОСТАВКА</Link>
+      <Link to="/vacancy">ВАКАНСІЇ</Link>
+      <Link to="/contact">КОНТАКТИ</Link>
+     
     </div>
   );
 }

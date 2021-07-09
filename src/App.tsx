@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { useEffect } from "react";
 
 import Info from "./Components/Info";
 import Menu from "./Components/Menu";
