@@ -13,7 +13,7 @@ import AboutUs from "./Components/AboutTomatina/index";
 import CartButton from "./Components/Cart/Cart-button";
 import CartSidebar from "./Components/Cart/Cart-sidebar";
 import CartPage from "./Components/Cart/Cart-page";
-
+import Contact from "./Components/Contact/Contact";
 import "./App.css";
 
 export interface orderedProductsInterface {
@@ -105,7 +105,12 @@ function App() {
             <CartPage />
           </Route>
         </Switch>
-        <Footer></Footer>
+        
+        <Route path="/contact">
+            <CartButton onClick={useCartSidebar} />
+            <Contact />
+          </Route>
+          <Footer></Footer>
       </div>
     </Router>
   );
