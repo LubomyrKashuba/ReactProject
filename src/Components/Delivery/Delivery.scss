@@ -1,0 +1,48 @@
+p {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  font-size: xx-large;
+  font-weight: 700;
+
+  span {
+    color: rgb(89, 153, 33);
+  }
+}
+.map {
+  position: relative;
+  iframe {
+    position: absolute;
+    right: 100px;
+    bottom: 50px;
+  }
+}
+.pay {
+  margin: 100px 0px;
+  text-align: center;
+  width: 100%;
+  font-size: xxx-large;
+  font-weight: 700;
+  color: rgb(66, 66, 66);
+}
+.payOption {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  img {
+    margin-right: 20px;
+  }
+  .payOptionDown {
+    display: flex;
+    width: 30%;
+    margin-bottom: 100px;
+  }
+  .payHeader {
+    font-weight: 500;
+    font-size: x-large;
+  }
+  .payFooter {
+    color: rgb(66, 66, 66);
+  }
+}

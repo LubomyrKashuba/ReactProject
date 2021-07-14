@@ -11,7 +11,7 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 5px 30px;
-  .MenuButtonHeader{
+  .MenuButtonHeader {
     overflow: hidden;
   }
   .MenuButtonHeader:hover {
@@ -28,6 +28,7 @@ header {
     justify-content: space-between;
     align-items: center;
     li {
+      bottom: 15px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -79,6 +80,9 @@ header {
       display: flex;
       align-items: center;
       justify-content: center;
+      h4 {
+        margin: 0;
+      }
       h4:hover {
         color: rgb(89, 153, 33);
         cursor: pointer;

@@ -10,6 +10,7 @@ import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
 import { cardProps } from "./Components/Card";
 import AboutUs from "./Components/AboutTomatina/index";
+import Delivery from "./Components/Delivery/Delivery";
 import CartButton from "./Components/Cart/Cart-button";
 import CartSidebar from "./Components/Cart/Cart-sidebar";
 import CartPage from "./Components/Cart/Cart-page";
@@ -100,6 +101,10 @@ function App() {
           <Route path="/about">
             <CartButton onClick={useCartSidebar} />
             <AboutUs />
+          </Route>
+          <Route path="/delivery">
+            <CartButton onClick={useCartSidebar} />
+            <Delivery />
           </Route>
           <Route path="/basket">
             <CartPage />

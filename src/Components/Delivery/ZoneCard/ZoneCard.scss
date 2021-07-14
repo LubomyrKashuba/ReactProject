@@ -1,0 +1,36 @@
+.zone {
+  position: relative;
+  margin-top: 50px;
+  padding-left: 300px;
+  width: 600px;
+  display: flex;
+  justify-content: space-between;
+  img {
+    position: absolute;
+    top: 20px;
+  }
+  .colorzone {
+    padding-left: 20px;
+    font-size: x-large;
+    font-weight: 700;
+    padding-top: 0;
+  }
+  li {
+    color: rgb(124, 124, 124);
+    list-style-type: circle;
+    font-weight: 700;
+    margin-top: 10px;
+  }
+}
+.greenZone {
+  color: green;
+}
+.yellowZone {
+  color: yellow;
+}
+.redZone {
+  color: red;
+}
+span {
+  color: rgb(89, 153, 33);
+}
