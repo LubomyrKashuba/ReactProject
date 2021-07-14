@@ -9,15 +9,19 @@ function Footer() {
       
       <div className="Footer_component">
         <div className="left-ul">
-        <a href="">ВАКАНСІЇ</a>
-        <a href="">Договір Оферта</a>
+        
+        <h1>ВАКАНСІЇ</h1> 
+        
+        <h1>Договір Оферта</h1>
         
       </div>
           
       </div>
       <div className="Footer_component">
         <div className="adress">
-        <div id="adress_button"><img alt="1" src="https://img.icons8.com/android/24/000000/place-marker.png"/></div>
+        <div id="adress_button">
+          
+          <img alt="1" src="https://img.icons8.com/android/24/000000/place-marker.png"/></div>
         <div>
         <h2>м.Львів</h2>
         <p>ТРЦ Victoria Gardens, Кульпарківська 226 А</p>
