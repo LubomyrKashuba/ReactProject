@@ -1,0 +1,32 @@
+.Contact__card{
+  padding: 20px 30px;
+height: 220px;
+width: 25%;
+border-radius: 6px;
+background-color: #afabab21;
+
+.contact__img{
+  width: 10%;
+ height: 40px;
+
+ 
+  
+
+}
+.contact__line {
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+.text {
+  padding-left: 10px;
+  width: 60%;
+  .contact__text {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  .contact__text__two {
+    font-size: 14px;
+  }
+}
+}

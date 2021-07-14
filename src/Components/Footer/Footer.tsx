@@ -21,7 +21,7 @@ function Footer() {
         <div className="adress">
         <div id="adress_button">
           
-          <img alt="1" src="https://img.icons8.com/android/24/000000/place-marker.png"/></div>
+          <img alt="1" src="https://www.tomatina.ua/wp-content/themes/tomatina/img/icons/contact_icon_one.svg"/></div>
         <div>
         <h2>м.Львів</h2>
         <p>ТРЦ Victoria Gardens, Кульпарківська 226 А</p>
@@ -33,17 +33,17 @@ function Footer() {
       </div>
       <div className="Footer_component">
         <div className="phone" >
-      <div id="phone_button"><img alt="1" src="https://img.icons8.com/metro/26/000000/phone.png"/></div>
+      <div id="phone_button"><img alt="1" src="https://www.tomatina.ua/wp-content/themes/tomatina/img/icons/contact_icon_tree.svg"/></div>
       <a href="tel:+380631938575">+38 (063) 193 85 75</a>
      
       </div>
       <div className="clock">
-      <div id="clock_button"><img alt="1" src="https://img.icons8.com/material-sharp/24/000000/clock.png"/></div>
+      <div id="clock_button"><img alt="1" src="https://www.tomatina.ua/wp-content/themes/tomatina/img/icons/contact_icon_foure.svg"/></div>
       <h2>Пн - Нд з 08:30 до 22:00</h2>
       </div>
       </div>
       <div className="Footer_component_folove">
-        <p>Слідкуй за нами</p>
+        <h1>Слідкуй за нами</h1>
         <div className="logo">
         <div id="facebook_button" ><img alt="1" src="https://img.icons8.com/fluent/48/000000/facebook-new.png"/></div>
         <div id="instagram_button"><img alt="1" src="https://img.icons8.com/plasticine/48/000000/instagram-new--v2.png"/></div>

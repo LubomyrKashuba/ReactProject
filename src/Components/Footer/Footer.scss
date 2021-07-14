@@ -34,11 +34,16 @@
   justify-content: space-around;
 }
 .adress {
+ 
   display: flex;
   justify-content: space-around;
 }
+ #adress_button{
+    padding: 10px;
+  }
 #clock_button {
   padding-left: 13px;
+  padding-top: 10px;
 }
 #facebook_button {
   margin-right: 15px;
@@ -57,6 +62,7 @@
   width: 25%;
   display: flex;
   justify-content: space-around;
+  font-size: 16px;
 
   .logo {
     display: flex;

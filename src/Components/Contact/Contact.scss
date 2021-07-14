@@ -1,16 +1,29 @@
-.contact{
+.contact {
   margin: 50px auto;
   width: 90%;
-  
-}
-.head{
-  margin: 50px;
-  display: flex;
-  justify-content: center;
-  font-size: 24px;
-line-height: 1.2em;
-}
-.contact__head{
-  padding-left: 10px;
-  color: #599921;
+ 
+  .head {
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    line-height: 1.2em;
+    .contact__head {
+      padding-left: 10px;
+      color: #599921;
+    }
+  }
+ 
+  .contact__cards{
+    display: flex;
+    justify-content: space-around;
+ align-items: center;
+ 
+  }
+  h1{
+    width: 30%;
+  }
+  h2{
+    font-size: 42px;
+  }
 }
