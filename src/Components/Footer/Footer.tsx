@@ -26,8 +26,8 @@ function Footer() {
         <h2>м.Львів</h2>
         <p>ТРЦ Victoria Gardens, Кульпарківська 226 А</p>
         <p>ТРЦ Spartak, Мазепи 1Б</p>
-        <h2>с. Сокільники</h2>
-        <p>ТРЦ King Cross, Стрийська 30</p>
+        {/* <h2>с. Сокільники</h2>
+        <p>ТРЦ King Cross, Стрийська 30</p> */}
         </div>
         </div>
       </div>

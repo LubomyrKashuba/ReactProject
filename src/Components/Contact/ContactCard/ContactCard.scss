@@ -26,7 +26,9 @@ background-color: #afabab21;
     font-size: 18px;
   }
   .contact__text__two {
-    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 }
