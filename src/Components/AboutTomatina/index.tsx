@@ -27,6 +27,9 @@ function AboutUs() {
 
       <div className="AboutUs__content">
         <div className="content__img">
+
+
+
           <img src="https://www.tomatina.ua/wp-content/uploads/2021/02/yajczya-benedykt-z-hrustkym-bekonom-ta-buryachkovym-ajoli-350x350.png" alt="IMG" />
         </div>
 
