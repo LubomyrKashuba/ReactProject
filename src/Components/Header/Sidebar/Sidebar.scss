@@ -1,15 +1,16 @@
 .sidebar {
-  position: absolute;
+  position: fixed;
   width: 400px;
   right: -400px;
-  top: 0px;
+  top: 0;
+  bottom: 0;
   height: 100vh;
   transition: 0.3s;
   background-image: url(https://www.tomatina.ua/wp-content/themes/tomatina/img/icons/menu_decor.svg);
   background-repeat: no-repeat;
   background-position: bottom;
   background-color: white;
-  z-index: 8;
+  z-index: 80;
 
   span {
     padding: 20px;
@@ -53,7 +54,8 @@
 }
 .sidebar__active {
   position: fixed;
-  z-index: 8;
-  right: 0px;
-  top: 0px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 80;
 }

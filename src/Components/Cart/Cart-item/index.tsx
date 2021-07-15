@@ -1,18 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import CloseIcon from "@material-ui/icons/Close";
+import { useDispatch } from "react-redux";
+import { decrement, increment } from "../../..";
 
 import "./Cart-item.scss";
 
 interface CartItemProps {
+  id: number;
   title: string;
   img: string;
   price: number;
   amount: number;
   remove: () => {};
 }
-const CartItem = ({ img, title, price, amount, remove }: CartItemProps) => {
-  const [count, setCount] = React.useState(amount);
+const CartItem = ({ id, img, title, price, amount, remove }: CartItemProps) => {
+  // const [count, setCount] = React.useState(amount);
+
+  const dispatch = useDispatch();
+
   return (
     <div className="CartItem">
       <Link to="">
@@ -21,19 +27,16 @@ const CartItem = ({ img, title, price, amount, remove }: CartItemProps) => {
       <div className="CartItem__desc">
         <Link to="">{title}</Link>
         <div className="controls">
-          <button
-            className="decrement"
-            onClick={() => setCount(count > 1 ? count - 1 : count)}
-          >
+          <button className="decrement" onClick={() => dispatch(decrement(id))}>
             -
           </button>
-          <div>{count}</div>
-          <button className="increment" onClick={() => setCount(count + 1)}>
+          <div>{amount}</div>
+          <button className="increment" onClick={() => dispatch(increment(id))}>
             +
           </button>
         </div>
         <div className="price">
-          <b>{price * count}</b>
+          <b>{price * amount}</b>
           грн
         </div>
       </div>
