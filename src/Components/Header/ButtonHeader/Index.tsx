@@ -2,6 +2,11 @@ import React from "react";
 
 import './ButtonHeader.scss'
 
+interface ButtonHeaderProps{
+  icons:string
+}
+
+
 function ButtonHeader({icons}:any) {
   return (
     <div className="ButtonHeader">

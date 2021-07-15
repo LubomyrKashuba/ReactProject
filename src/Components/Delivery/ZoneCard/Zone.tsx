@@ -2,11 +2,16 @@ import react from "react";
 
 import "./ZoneCard.scss";
 
-// interface ZoneProps{
-//     colorZone:string
-// }
+interface ZoneProps {
+  srcZone:string;
+  colorZone: string;
+  timeZone:string;
+  priceZone:string;
+  priceDelivery:string;
 
-function Zone({ srcZone, colorZone, timeZone, priceZone, priceDelivery }: any) {
+}
+
+function Zone({ srcZone, colorZone, timeZone, priceZone, priceDelivery }: ZoneProps) {
   return (
     <div className="zone">
       <div>

@@ -1,0 +1,13 @@
+.Vacancy {
+  width: 100%;
+  text-align: center;
+  font-size: xxx-large;
+  font-weight: 700;
+//   margin: 150px 0;
+  .VacancyPosition{
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+}
