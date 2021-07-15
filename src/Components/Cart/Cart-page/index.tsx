@@ -1,5 +1,5 @@
 import React from "react";
-import { Formik, Field, Form, FormikHelpers, useFormik } from "formik";
+// import { Formik, Field, Form, FormikHelpers, useFormik } from "formik";
 
 import "./Cart-page.scss";
 
@@ -9,46 +9,46 @@ interface Values {
   email: string;
 }
 
-const validate = (values: any) => {
-  const errors: any = {};
+// const validate = (values: any) => {
+//   const errors: any = {};
 
-  if (values.firstName !== "") {
-    errors.firstName = true;
-  } else {
-    errors.firstName = false;
-  }
+//   if (values.firstName !== "") {
+//     errors.firstName = true;
+//   } else {
+//     errors.firstName = false;
+//   }
 
-  if (values.lastName !== "") {
-    errors.lastName = true;
-  } else {
-    errors.lastName = false;
-  }
+//   if (values.lastName !== "") {
+//     errors.lastName = true;
+//   } else {
+//     errors.lastName = false;
+//   }
 
-  if (values.phone !== "") {
-    errors.phone = true;
-  } else {
-    errors.phone = false;
-  }
+//   if (values.phone !== "") {
+//     errors.phone = true;
+//   } else {
+//     errors.phone = false;
+//   }
 
-  return errors;
-};
+//   return errors;
+// };
 
 const CartPage = () => {
-  const formik = useFormik({
-    initialValues: {
-      firstName: "",
-      lastName: "",
-      phone: "",
-    },
-    validate,
-    onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
-    },
-  });
+  // const formik = useFormik({
+  //   initialValues: {
+  //     firstName: "",
+  //     lastName: "",
+  //     phone: "",
+  //   },
+  //   validate,
+  //   onSubmit: (values) => {
+  //     alert(JSON.stringify(values, null, 2));
+  //   },
+  // });
 
   return (
     <div className="CartPage">
-      <div className="CartPage__title">Оформлення замовлення</div>
+      {/* <div className="CartPage__title">Оформлення замовлення</div>
       <form className="CartPage__form" onSubmit={formik.handleSubmit}>
         <div className="leftSide">
           <div className="form-group">
@@ -95,7 +95,7 @@ const CartPage = () => {
           <div className="form-group"></div>
         </div>
         <div className="rightSide"></div>
-      </form>
+      </form> */}
     </div>
   );
 };

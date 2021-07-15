@@ -1,13 +1,14 @@
-import React from "react";
+import React, { ReactNode } from "react";
+
 
 import './ButtonHeader.scss'
 
 interface ButtonHeaderProps{
-  icons:string
+  icons: ReactNode;
 }
 
 
-function ButtonHeader({icons}:any) {
+function ButtonHeader({icons}:ButtonHeaderProps) {
   return (
     <div className="ButtonHeader">
       <svg
