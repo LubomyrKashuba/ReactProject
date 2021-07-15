@@ -1,0 +1,19 @@
+.CartPage {
+  &__title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.2em;
+    color: #2d2c2c;
+    margin-bottom: 40px;
+  }
+  .valid{
+      border: green 1px solid;
+  }
+  .invalid{
+    border: red 1px solid;
+  }
+  input:focus{
+      outline: none;
+  }
+}
