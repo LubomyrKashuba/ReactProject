@@ -1,5 +1,8 @@
 import React from "react";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
+import PhoneIphoneIcon from "@material-ui/icons/PhoneIphone";
+import MenuIcon from "@material-ui/icons/Menu";
+import PermIdentityIcon from "@material-ui/icons/PermIdentity";
 
 import "./Header.scss";
 import MenuHover from "./Menu/MunuHover";
@@ -24,27 +27,34 @@ function Header({ onClick }: any) {
               МЕНЮ
               <MenuHover />
             </li>
-            <li>ВАКАНCІЇ</li>
-            <li>ДОСТАВКА</li>
+            <Link to="/vacancy">
+              <li className="HeaderRout">ВАКАНCІЇ</li>
+            </Link>
+            <Link to="/delivery">
+              <li className="HeaderRout">ДОСТАВКА</li>
+            </Link>
           </ul>
         </div>
         <div className="right">
           <div className="right-left">ЗАЛИШИТИ ВіДГУК</div>
-          <ButtonHeader
-            icons={<FavoriteBorderIcon />}
-          ></ButtonHeader>
+          <ButtonHeader icons={<FavoriteBorderIcon />}></ButtonHeader>
           <div className="right-center">
-            <button id="phoneButton">phone </button>
+            <ButtonHeader icons={<PhoneIphoneIcon />}></ButtonHeader>
             <div>
               <h4>+38 (063) 117 06 58</h4>
               <p>Працюємо Пн - Нд з 08:30 до 22:00</p>
             </div>
           </div>
-          <div className="right-right">ВХІД</div>
+          <div className="right-right">
+            ВХІД
+            <div className='right-right-icon'>
+              <PermIdentityIcon />
+            </div>
+          </div>
           <div>
-            <button id="menuButton" onClick={onClick}>
-              menu
-            </button>
+            <ButtonHeader
+              icons={<MenuIcon onClick={onClick}></MenuIcon>}
+            ></ButtonHeader>
           </div>
         </div>
       </header>

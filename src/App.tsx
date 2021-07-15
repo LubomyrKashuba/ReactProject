@@ -16,6 +16,7 @@ import CartSidebar from "./Components/Cart/Cart-sidebar";
 import CartPage from "./Components/Cart/Cart-page";
 import Contact from "./Components/Contact/Contact";
 import "./App.css";
+import Vacancy from "./Components/Vacancy/Vacancy";
 
 export interface orderedProductsInterface {
   product: cardProps;
@@ -105,6 +106,10 @@ function App() {
           <Route path="/delivery">
             <CartButton onClick={useCartSidebar} />
             <Delivery />
+          </Route>
+          <Route path="/vacancy">
+            <CartButton onClick={useCartSidebar} />
+            <Vacancy />
           </Route>
           <Route path="/basket">
             <CartPage />
