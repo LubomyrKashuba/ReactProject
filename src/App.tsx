@@ -34,6 +34,7 @@ export interface StateRoot {
   drink: cardProps[];
   orderedProducts: orderedProductsInterface[];
 }
+fetch('http://localhost:8000').then(res=>console.log(res))
 
 // fetch('http://localhost:8000/').then(res=>console.log(res))
 
