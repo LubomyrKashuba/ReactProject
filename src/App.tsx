@@ -15,8 +15,9 @@ import CartButton from "./Components/Cart/Cart-button";
 import CartSidebar from "./Components/Cart/Cart-sidebar";
 import CartPage from "./Components/Cart/Cart-page";
 import Contact from "./Components/Contact/Contact";
-import "./App.css";
 import Vacancy from "./Components/Vacancy/Vacancy";
+
+import "./App.css";
 
 export interface orderedProductsInterface {
   product: cardProps;
@@ -33,6 +34,8 @@ export interface StateRoot {
   drink: cardProps[];
   orderedProducts: orderedProductsInterface[];
 }
+
+// fetch('http://localhost:8000/').then(res=>console.log(res))
 
 function App() {
   const [sidebar, setSidebar] = React.useState(false);

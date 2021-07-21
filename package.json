@@ -19,9 +19,12 @@
     "react": "^17.0.2",
     "react-bootstrap": "^1.6.1",
     "react-dom": "^17.0.2",
+    "react-input-mask": "^2.0.4",
+    "react-maskedinput": "^4.0.1",
     "react-redux": "^7.2.4",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
+    "react-select": "^4.3.1",
     "typescript": "^4.3.2",
     "web-vitals": "^1.1.2"
   },
@@ -50,6 +53,9 @@
     ]
   },
   "devDependencies": {
-    "@types/react-router-dom": "^5.1.7"
+    "@types/react-input-mask": "^3.0.1",
+    "@types/react-maskedinput": "^4.0.5",
+    "@types/react-router-dom": "^5.1.7",
+    "@types/react-select": "^4.0.17"
   }
 }
