@@ -1,6 +1,6 @@
 .Contact__card{
   padding: 20px 30px;
-height: 220px;
+height: 320px;
 width: 25%;
 border-radius: 6px;
 background-color: #afabab21;
@@ -22,11 +22,13 @@ background-color: #afabab21;
   padding-left: 10px;
   width: 60%;
   .contact__text {
+   
     font-weight: bold;
     font-size: 18px;
   }
   .contact__text__two {
     display: flex;
+    
     align-items: center;
     justify-content: center;
   }

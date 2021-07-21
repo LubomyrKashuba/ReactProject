@@ -32,6 +32,7 @@ export interface StateRoot {
   drink: cardProps[];
   orderedProducts: orderedProductsInterface[];
 }
+fetch('http://localhost:8000').then(res=>console.log(res))
 
 function App() {
   const [sidebar, setSidebar] = React.useState(false);
