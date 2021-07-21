@@ -19,7 +19,7 @@ import "./index.css";
 
 export interface ActionType {
   type: string;
-  payload: any;
+  payload: orderedProductsInterface | any;
 }
 
 function counterReducer(
@@ -64,6 +64,34 @@ function counterReducer(
         ...state,
         orderedProducts: action.payload,
       };
+    case "increment":
+      return {
+        ...state,
+        orderedProducts: state.orderedProducts.map(
+          (item: orderedProductsInterface) => {
+            if (action.payload === item.product.id) {
+              item.count += 1;
+              return item;
+            } else {
+              return item;
+            }
+          }
+        ),
+      };
+    case "decrement":
+      return {
+        ...state,
+        orderedProducts: state.orderedProducts.map(
+          (item: orderedProductsInterface) => {
+            if (action.payload === item.product.id) {
+              item.count -= 1;
+              return item;
+            } else {
+              return item;
+            }
+          }
+        ),
+      };
     default:
       return state;
   }
@@ -82,6 +110,15 @@ export const removeFromBasket = (id: number) => ({
 export const clearBasket = () => ({
   type: "clearBasket",
   payload: [],
+});
+
+export const increment = (id: number) => ({
+  type: "increment",
+  payload: id,
+});
+export const decrement = (id: number) => ({
+  type: "decrement",
+  payload: id,
 });
 
 const store = createStore(counterReducer);

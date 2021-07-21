@@ -28,6 +28,7 @@ header {
     justify-content: space-between;
     align-items: center;
     li {
+      color: black;
       bottom: 15px;
       display: flex;
       justify-content: space-between;
@@ -37,7 +38,6 @@ header {
       cursor: pointer;
       font-weight: 500;
       font-size: 12;
-      font-family: Arial;
       height: 100%;
       line-height: 100%;
     }
@@ -75,6 +75,16 @@ header {
       font-weight: 700;
       transition: 0.2s;
       cursor: pointer;
+    }
+    .right-right {
+      position: relative;
+      width: 50px;
+      .right-right-icon {
+        position: absolute;
+        right: 50px;
+        bottom: -5px;
+        color: rgb(89, 153, 33);;
+      }
     }
     .right-center {
       display: flex;

@@ -41,6 +41,7 @@ const CartSidebar = ({ className, closeCart, blur }: CartSidebarProps) => {
               totalPrice += item.product.price * item.count;
               return (
                 <CartItem
+                  id={item.product.id}
                   key={item.product.id}
                   img={item.product.img}
                   title={item.product.title}
