@@ -21,7 +21,6 @@ const CartSidebar = ({ className, closeCart, blur }: CartSidebarProps) => {
   const dispatch = useDispatch();
 
   let totalPrice = 0;
-  console.log(store.orderedProducts);
 
   return (
     <div className={blur} onClick={closeCart}>

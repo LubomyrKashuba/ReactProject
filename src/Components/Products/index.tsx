@@ -5,11 +5,10 @@ import "./Products.scss";
 
 interface productsProps {
   items: cardProps[];
+  fav?: boolean;
 }
 
-const Products = ({ items }: productsProps) => {
-  
-
+const Products = ({ items, fav }: productsProps) => {
   return (
     <div className="Products">
       {items.map((item: cardProps) => {
@@ -21,6 +20,7 @@ const Products = ({ items }: productsProps) => {
             description={item.description}
             price={item.price}
             id={item.id}
+            fav={fav}
           />
         );
       })}

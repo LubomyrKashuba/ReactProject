@@ -2,18 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import { createStore } from "redux";
-
-import App, { orderedProductsInterface } from "./App";
 import reportWebVitals from "./reportWebVitals";
-import {
-  breakfast,
-  pasta,
-  salad,
-  sandwich,
-  soup,
-  dessert,
-  drink,
-} from "./data/data";
+
+import App, { orderedProductsInterface, products, StateRoot } from "./App";
+import { cardProps } from "./Components/Card";
 
 import "./index.css";
 
@@ -23,21 +15,21 @@ export interface ActionType {
 }
 
 function counterReducer(
-  state = {
-    breakfast,
-    pasta,
-    salad,
-    sandwich,
-    soup,
-    dessert,
-    drink,
+  state: StateRoot = {
+    products: {} as products,
     orderedProducts: [],
+    favorite: [],
   },
   action: ActionType
 ) {
   switch (action.type) {
+    case "addToStore":
+      return {
+        ...state,
+        products: action.payload,
+      };
     case "addTOBasket":
-      let arr: any = [];
+      let arr: orderedProductsInterface[] = [];
       let check = false;
       state.orderedProducts.forEach((item: orderedProductsInterface) => {
         if (action.payload.product.id === item.product.id) {
@@ -92,11 +84,36 @@ function counterReducer(
           }
         ),
       };
+    case "addToFavorite":
+      let array: cardProps[] = [...state.favorite];
+      array.push(action.payload);
+      return {
+        ...state,
+        favorite: [...array],
+      };
+    case "removeFavorite":
+      return {
+        ...state,
+        favorite: state.favorite.filter((item) => item.id !== action.payload),
+      };
     default:
       return state;
   }
 }
 
+export const removeFavorite = (id: number) => ({
+  type: "removeFavorite",
+  payload: id,
+});
+export const addToFavorite = (add: cardProps) => ({
+  type: "addToFavorite",
+  payload: add,
+});
+
+export const addToStore = (add: products) => ({
+  type: "addToStore",
+  payload: add,
+});
 export const addToBasket = (add: orderedProductsInterface) => ({
   type: "addTOBasket",
   payload: add,

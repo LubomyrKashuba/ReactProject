@@ -18,13 +18,25 @@ interface Values {
   houseNumber: string;
   email: string;
 }
-const options = [
+
+interface Errors {
+  firstName: Boolean;
+  lastName: Boolean;
+  phone: Boolean;
+  street: Boolean;
+  houseNumber: Boolean;
+}
+export interface selectOption{
+  value: String;
+  label:String;
+}
+const options:selectOption[] = [
   { value: "Львів", label: "Львів" },
   { value: "Брюховичі", label: "Брюховичі" },
   { value: "Дубляни", label: "Дубляни" },
 ];
 const validate = (values: Values) => {
-  const errors: any = {};
+  const errors = {} as Errors;
 
   if (values.firstName !== "") {
     errors.firstName = true;
