@@ -37,7 +37,11 @@ function Header({ onClick }: any) {
         </div>
         <div className="right">
           <div className="right-left">ЗАЛИШИТИ ВіДГУК</div>
-          <ButtonHeader icons={<FavoriteBorderIcon />}></ButtonHeader>
+          <Link to="/favorite">
+            <ButtonHeader
+              icons={<FavoriteBorderIcon></FavoriteBorderIcon>}
+            ></ButtonHeader>
+          </Link>
           <div className="right-center">
             <ButtonHeader icons={<PhoneIphoneIcon />}></ButtonHeader>
             <div>
@@ -47,7 +51,7 @@ function Header({ onClick }: any) {
           </div>
           <div className="right-right">
             ВХІД
-            <div className='right-right-icon'>
+            <div className="right-right-icon">
               <PermIdentityIcon />
             </div>
           </div>
