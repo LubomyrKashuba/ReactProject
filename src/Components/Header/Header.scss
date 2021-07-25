@@ -68,7 +68,7 @@ header {
       justify-content: center;
       align-items: center;
       height: 60px;
-      width: 230px;
+      width: 200px;
       background-color: rgb(245, 245, 245);
       color: rgb(89, 153, 33);
       border-radius: 10px;
@@ -76,16 +76,17 @@ header {
       transition: 0.2s;
       cursor: pointer;
     }
-    .right-right {
-      position: relative;
-      width: 50px;
-      .right-right-icon {
-        position: absolute;
-        right: 50px;
-        bottom: -5px;
-        color: rgb(89, 153, 33);;
-      }
-    }
+    // .right-right {
+    //   position: relative;
+    //   width: 50px;
+    //   text-align: end;
+    //   .right-right-icon {
+    //     position: absolute;
+    //     right: 35px;
+    //     bottom: -5px;
+    //     color: rgb(89, 153, 33);
+    //   }
+    // }
     .right-center {
       display: flex;
       align-items: center;
