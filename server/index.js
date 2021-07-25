@@ -10,4 +10,4 @@ app.get("/", function (req, res) {
   res.send(data).status(200);
 });
 
-app.listen(8000);
+app.listen(8000,()=>{return(console.log('Server started'))});

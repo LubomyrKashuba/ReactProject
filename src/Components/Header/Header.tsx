@@ -46,15 +46,15 @@ function Header({ onClick }: any) {
             <ButtonHeader icons={<PhoneIphoneIcon />}></ButtonHeader>
             <div>
               <h4>+38 (063) 117 06 58</h4>
-              <p>Працюємо Пн - Нд з 08:30 до 22:00</p>
+              <p>Працюємо з 08:30 до 22:00</p>
             </div>
           </div>
-          <div className="right-right">
+          {/* <div className="right-right">
             ВХІД
             <div className="right-right-icon">
               <PermIdentityIcon />
             </div>
-          </div>
+          </div> */}
           <div>
             <ButtonHeader
               icons={<MenuIcon onClick={onClick}></MenuIcon>}
