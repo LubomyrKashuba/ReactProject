@@ -117,6 +117,11 @@
     }
     .leftSide {
       width: 45%;
+      iframe {
+        border: 10px solid rgb(89, 153, 33);
+        border-radius: 20px;
+        width: 100%;
+      }
     }
     .rightSide {
       width: 45%;
@@ -156,6 +161,35 @@
           color: #599921;
         }
       }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .CartPage {
+    &__form {
+      flex-wrap: wrap;
+      .leftSide,
+      .rightSide {
+        width: 100%;
+        iframe {
+          height: 300px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .CartPage {
+    padding: 0;
+    &__title {
+      font-size: 25px;
+    }
+    input,
+    select {
+      font-size: 13px;
+      padding: 0 5px;
     }
   }
 }

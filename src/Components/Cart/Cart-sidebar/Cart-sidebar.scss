@@ -114,3 +114,13 @@
 .open {
   right: 0;
 }
+
+@media (max-width: 767px) {
+  .open{
+    left: 0;
+  }
+  .CartSidebar{
+    width: 100%;
+    right: -100%;
+  }
+}
