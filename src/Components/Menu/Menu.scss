@@ -20,10 +20,26 @@
     padding: 3px;
     flex-wrap: wrap;
     li {
-      padding:10px 0;
+      margin-bottom: 10px;
+      text-align: center;
+      padding: 10px 0;
       list-style-type: none;
       &:not(:first-child) {
         margin-left: 5px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .Menu {
+    &__title {
+      font-size: 25px;
+    }
+    &__list{
+      li{
+        width: 100%;
+        
       }
     }
   }
