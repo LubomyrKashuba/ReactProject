@@ -2,7 +2,6 @@ import React from "react";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import PhoneIphoneIcon from "@material-ui/icons/PhoneIphone";
 import MenuIcon from "@material-ui/icons/Menu";
-import PermIdentityIcon from "@material-ui/icons/PermIdentity";
 
 import "./Header.scss";
 import MenuHover from "./Menu/MunuHover";
@@ -45,16 +44,10 @@ function Header({ onClick }: any) {
           <div className="right-center">
             <ButtonHeader icons={<PhoneIphoneIcon />}></ButtonHeader>
             <div>
-              <h4>+38 (063) 117 06 58</h4>
+              <h4><a href="tel:+380631938575">+38 (063) 193 85 75</a></h4>
               <p>Працюємо з 08:30 до 22:00</p>
             </div>
           </div>
-          {/* <div className="right-right">
-            ВХІД
-            <div className="right-right-icon">
-              <PermIdentityIcon />
-            </div>
-          </div> */}
           <div>
             <ButtonHeader
               icons={<MenuIcon onClick={onClick}></MenuIcon>}

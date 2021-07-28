@@ -14,14 +14,19 @@
       color: rgb(89, 153, 33);
     }
   }
+  .deliveryTop {
+    width: 85%;
+    display: flex;
+    justify-content: space-around;
+    margin: 30px auto;
+  }
   .map {
-    
     iframe {
       width: 500px;
       height: 400px;
       border: 10px solid rgb(89, 153, 33);
       border-radius: 20px;
-      margin-left: 40px;
+      margin-left: 100px;
     }
   }
   .pay {

@@ -1,11 +1,11 @@
 .AboutUs {
   margin: 50px auto;
   width: 90%;
-  p{
+  p {
     line-height: 1.5em;
     font-size: 22px;
     outline: none;
-    color: #6D6D6D;
+    color: #6d6d6d;
     margin-bottom: 0;
     font-weight: 200;
     vertical-align: baseline;
@@ -24,13 +24,11 @@
 .AboutUs__content {
   display: flex;
   justify-content: space-between;
-  
 
   .content__text {
     margin: 50px auto;
     width: 50%;
     font-size: 14px;
-    
   }
   .content__img {
     width: 50%;
@@ -39,13 +37,12 @@
     align-items: center;
   }
 }
-.youtube{
+.youtube {
   display: flex;
   justify-content: center;
   height: 600px;
- iframe{
-width: 90%;
-height: 100%;
- }
-  
+  iframe {
+    width: 90%;
+    height: 100%;
+  }
 }
