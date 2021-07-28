@@ -4,18 +4,23 @@
   margin: 20px auto;
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  
 
   .Footer_component {
     background-color: white;
     width: 25%;
     h1,
     h2,
+    a,
     p {
       font-family: Arial;
       font-size: 16px;
+      color: black;
+     
     }
 
-    h1:hover {
+    a:hover {
       color: rgb(89, 153, 33);
     }
  
@@ -32,36 +37,34 @@
 .clock {
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 .adress {
  
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
  #adress_button{
     padding: 10px;
+    margin-top: -55px;
   }
 #clock_button {
   padding-left: 13px;
   padding-top: 10px;
 }
 #facebook_button {
-  margin-right: 15px;
-  height: 25px;
-  width: 25px;
-  border-radius: 50%;
+margin: 5px;
 }
 #instagram_button {
-  margin-left: 15px;
-  height: 25px;
-  width: 25px;
-  border-radius: 50%;
+  margin: 5px;
 }
 .Footer_component_folove {
   height: 150px;
   width: 25%;
   display: flex;
   justify-content: space-around;
+  align-items: center;
   font-size: 8px;
 
   .logo {
