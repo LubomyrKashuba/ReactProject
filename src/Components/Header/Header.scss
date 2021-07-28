@@ -23,7 +23,7 @@ header {
   }
   .center-ul {
     padding: 0px 5px;
-    height: 100px;
+    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -46,15 +46,15 @@ header {
     }
   }
   .logo {
-    height: 100px;
-    width: 10%;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
+    img{
+      width: 100%;
+    }
   }
   .center {
-    height: 100px;
     width: 20%;
     margin: 10px 20px;
   }
@@ -76,23 +76,14 @@ header {
       transition: 0.2s;
       cursor: pointer;
     }
-    // .right-right {
-    //   position: relative;
-    //   width: 50px;
-    //   text-align: end;
-    //   .right-right-icon {
-    //     position: absolute;
-    //     right: 35px;
-    //     bottom: -5px;
-    //     color: rgb(89, 153, 33);
-    //   }
-    // }
     .right-center {
       display: flex;
       align-items: center;
       justify-content: center;
+      margin-right:10px ;
       h4 {
         margin: 0;
+        font-size: 12px;
       }
       h4:hover {
         color: rgb(89, 153, 33);
@@ -133,4 +124,57 @@ header {
     color: rgb(89, 153, 33);
     border: solid 1px rgb(89, 153, 33);
   }
+}
+
+@media(max-width:1199px){
+  header{
+    .center-ul{
+      justify-content: center;
+      li:last-child{
+        display: none;
+      }
+    }
+    .right{
+      width: 60%;
+      
+    }
+  } 
+}
+
+@media(max-width:991px){
+  header{
+    .right{
+      width: 60%;
+      .right-center{
+        display: none;
+      }
+    }
+  } 
+}
+
+@media(max-width:767px){
+  header{
+    height: 70px;
+    .right{
+      width: 30%;
+      .right-left{
+        display: none;
+      }
+    }
+  } 
+}
+
+@media(max-width:480px){
+  header{
+    padding: 5px 10px;
+    height: 60px;
+    .right{
+      width: 20%;
+      a{
+        .ButtonHeader{
+          display: none;
+        }
+      }
+    }
+  } 
 }

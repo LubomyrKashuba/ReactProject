@@ -49,12 +49,6 @@ function Header({ onClick }: any) {
               <p>Працюємо з 08:30 до 22:00</p>
             </div>
           </div>
-          {/* <div className="right-right">
-            ВХІД
-            <div className="right-right-icon">
-              <PermIdentityIcon />
-            </div>
-          </div> */}
           <div>
             <ButtonHeader
               icons={<MenuIcon onClick={onClick}></MenuIcon>}
