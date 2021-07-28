@@ -42,3 +42,52 @@
     }
   }
 }
+
+@media (max-width: 1199px) {
+  .Info {
+    &__banner {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .Info {
+    width: 100%;
+    justify-content: center;
+    &__title {
+      display: none;
+    }
+    &__banner {
+      width: 100%;
+      height: 450px;
+      display: block;
+      background-image: url(https://www.tomatina.ua/wp-content/uploads/2020/12/mobile-banner-3.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      img {
+        visibility: hidden;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .Info {
+    margin: 0;
+    padding: 10px 0;
+    &__banner {
+      height: 410px;
+      background-size: 80%;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .Info {
+    &__banner {
+      height: 300px;
+      background-size: contain;
+    }
+  }
+}

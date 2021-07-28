@@ -21,16 +21,19 @@ function AboutUs() {
           </p>
         </div>
         <div className="content__img">
-          <img src="https://www.tomatina.ua/wp-content/uploads/2021/02/vivsyanka-z-lonom-ta-brynzoyu-pid-sousom-golandez-350x350.png" alt="IMG" />
+          <img
+            src="https://www.tomatina.ua/wp-content/uploads/2021/02/vivsyanka-z-lonom-ta-brynzoyu-pid-sousom-golandez-350x350.png"
+            alt="IMG"
+          />
         </div>
       </div>
 
       <div className="AboutUs__content">
         <div className="content__img">
-
-
-
-          <img src="https://www.tomatina.ua/wp-content/uploads/2021/02/yajczya-benedykt-z-hrustkym-bekonom-ta-buryachkovym-ajoli-350x350.png" alt="IMG" />
+          <img
+            src="https://www.tomatina.ua/wp-content/uploads/2021/02/yajczya-benedykt-z-hrustkym-bekonom-ta-buryachkovym-ajoli-350x350.png"
+            alt="IMG"
+          />
         </div>
 
         <div className="content__text">
@@ -51,11 +54,14 @@ function AboutUs() {
         </div>
       </div>
 
-<h1 className="head">Tomatina - це любов!</h1>
+      <h1 className="head">Tomatina - це любов!</h1>
       <div className="youtube">
-
-      <iframe title="This is a unique title" src="https://www.youtube.com/embed/Lf-IKGReGSo?" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" ></iframe>
-</div>
+        <iframe
+          title="This is a unique title"
+          src="https://www.youtube.com/embed/Lf-IKGReGSo?"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        ></iframe>
+      </div>
     </div>
   );
 }

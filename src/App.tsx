@@ -21,6 +21,7 @@ import Favorite from "./Components/Favorite";
 import { addToStore } from ".";
 
 import "./App.css";
+import Oferta from "./Components/Oferta/Oferta";
 
 export interface orderedProductsInterface {
   product: cardProps;
@@ -139,6 +140,11 @@ function App() {
               <CartButton onClick={useCartSidebar} />
               <Favorite />
             </Route>
+
+            <Route path="/Oferta">
+                <Oferta />
+            </Route>
+
           </Switch>
           <Footer></Footer>
         </div>
