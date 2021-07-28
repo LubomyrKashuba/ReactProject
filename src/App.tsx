@@ -72,7 +72,7 @@ function App() {
           blur={!cart ? "blur" : ""}
         />
         <div className={cart ? "App" : "App disabled"}>
-          <Sidebar active={sidebar} onClick={() => setSidebar(false)} />
+          <Sidebar blur={sidebar ? "blur" : ""} active={sidebar} onClick={() => setSidebar(false)} />
           <Header onClick={() => setSidebar(true)} />
           <Switch>
             <Route exact path="/">
