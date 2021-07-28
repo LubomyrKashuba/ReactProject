@@ -10,7 +10,7 @@
 header {
   display: flex;
   justify-content: space-between;
-  padding: 5px 30px;
+  padding: 15px 30px;
   .MenuButtonHeader {
     overflow: hidden;
   }
@@ -50,7 +50,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    img{
+    img {
       width: 100%;
     }
   }
@@ -80,105 +80,105 @@ header {
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-right:10px ;
+      margin-right: 10px;
       h4 {
         margin: 0;
         font-size: 12px;
         color: black;
-      a {
-        margin: 0;
-        color: black;
-      }
-      a:hover {
-        color: rgb(89, 153, 33);
-        cursor: pointer;
-        transition: 0.4s;
+        a {
+          margin: 0;
+          color: black;
+        }
+        a:hover {
+          color: rgb(89, 153, 33);
+          cursor: pointer;
+          transition: 0.4s;
+        }
       }
       p {
         font-size: x-small;
+        margin: 0;
       }
       div {
         padding-left: 10px;
       }
     }
-  }
-  .right-left:hover {
-    color: white;
-    background-color: rgb(89, 153, 33);
-  }
-  .right-right:hover {
-    color: rgb(89, 153, 33);
-    cursor: pointer;
-    transition: 0.4s;
-  }
-  #likeButton,
-  #phoneButton,
-  #menuButton {
-    background-color: rgb(89, 153, 33);
-    color: white;
-    outline: none;
-    border: none;
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-  }
-  #likeButton:hover,
-  #menuButton:hover {
-    background-color: white;
-    color: rgb(89, 153, 33);
-    border: solid 1px rgb(89, 153, 33);
+    .right-left:hover {
+      color: white;
+      background-color: rgb(89, 153, 33);
+    }
+    .right-right:hover {
+      color: rgb(89, 153, 33);
+      cursor: pointer;
+      transition: 0.4s;
+    }
+    #likeButton,
+    #phoneButton,
+    #menuButton {
+      background-color: rgb(89, 153, 33);
+      color: white;
+      outline: none;
+      border: none;
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+    }
+    #likeButton:hover,
+    #menuButton:hover {
+      background-color: white;
+      color: rgb(89, 153, 33);
+      border: solid 1px rgb(89, 153, 33);
+    }
   }
 }
-
-@media(max-width:1199px){
-  header{
-    .center-ul{
+@media (max-width: 1199px) {
+  header {
+    .center-ul {
       justify-content: center;
-      li:last-child{
+      li:last-child {
         display: none;
       }
     }
-    .right{
+    .right {
       width: 60%;
-      
     }
-  } 
+  }
 }
 
-@media(max-width:991px){
-  header{
-    .right{
+@media (max-width: 991px) {
+  header {
+    .right {
       width: 60%;
-      .right-center{
+      .right-center {
         display: none;
       }
     }
-  } 
+  }
 }
 
-@media(max-width:767px){
-  header{
+@media (max-width: 767px) {
+  header {
     height: 70px;
-    .right{
+    .right {
       width: 30%;
-      .right-left{
+      .right-left {
         display: none;
       }
     }
-  } 
+  }
 }
 
-@media(max-width:480px){
-  header{
+@media (max-width: 480px) {
+  header {
     padding: 5px 10px;
     height: 60px;
-    .right{
+    .right {
       width: 20%;
-      a{
-        .ButtonHeader{
+      a {
+        .ButtonHeader {
           display: none;
         }
       }
     }
-  } 
+  }
 }
