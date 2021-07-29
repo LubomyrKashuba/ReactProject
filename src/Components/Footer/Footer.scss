@@ -5,7 +5,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  
+  flex-wrap: wrap;
 
   .Footer_component {
     background-color: white;
@@ -70,5 +70,17 @@ margin: 5px;
   .logo {
     display: flex;
     justify-content: space-between;
+  }
+}
+
+@media (max-width: 767px) {
+  .Footer_component{
+    width: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .Footer_component{
+    width: 100%;
   }
 }

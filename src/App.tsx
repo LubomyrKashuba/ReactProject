@@ -18,12 +18,12 @@ import CartPage from "./Components/Cart/Cart-page";
 import Contact from "./Components/Contact/Contact";
 import Vacancy from "./Components/Vacancy/Vacancy";
 import Favorite from "./Components/Favorite";
+import Oferta from "./Components/Oferta/Oferta";
 import { addToStore } from ".";
 
 import "./App.css";
-import Oferta from "./Components/Oferta/Oferta";
 
-export interface orderedProductsInterface {
+export interface OrderedProductsInterface {
   product: cardProps;
   count: number;
 }
@@ -39,11 +39,11 @@ export interface products {
 export interface StateRoot {
   products: products;
   favorite: cardProps[];
-  orderedProducts: orderedProductsInterface[];
+  orderedProducts: OrderedProductsInterface[];
 }
-fetch('http://localhost:8000').then(res=>console.log(res))
 
 function App() {
+  
   const [loading, setLoading] = useState(false);
 
   const dispatch = useDispatch();
@@ -53,7 +53,7 @@ function App() {
       .then((res) => dispatch(addToStore(res)))
       .then(() => setLoading(!loading));
   }, []);
-
+  
   const [sidebar, setSidebar] = React.useState(false);
   const [cart, setCart] = React.useState(true);
 
@@ -72,7 +72,11 @@ function App() {
           blur={!cart ? "blur" : ""}
         />
         <div className={cart ? "App" : "App disabled"}>
-          <Sidebar blur={sidebar ? "blur" : ""} active={sidebar} onClick={() => setSidebar(false)} />
+          <Sidebar
+            blur={sidebar ? "blur" : ""}
+            active={sidebar}
+            onClick={() => setSidebar(false)}
+          />
           <Header onClick={() => setSidebar(true)} />
           <Switch>
             <Route exact path="/">
@@ -140,11 +144,9 @@ function App() {
               <CartButton onClick={useCartSidebar} />
               <Favorite />
             </Route>
-
             <Route path="/Oferta">
-                <Oferta />
+              <Oferta />
             </Route>
-
           </Switch>
           <Footer></Footer>
         </div>

@@ -27,11 +27,11 @@ const CartItem = ({ id, img, title, price, amount, remove }: CartItemProps) => {
       <div className="CartItem__desc">
         <Link to="">{title}</Link>
         <div className="controls">
-          <button className="decrement" onClick={() => dispatch(decrement(id))}>
+          <button type="button" className="decrement" onClick={() => dispatch(decrement(id))}>
             -
           </button>
           <div>{amount}</div>
-          <button className="increment" onClick={() => dispatch(increment(id))}>
+          <button type="button" className="increment" onClick={() => dispatch(increment(id))}>
             +
           </button>
         </div>
@@ -40,7 +40,7 @@ const CartItem = ({ id, img, title, price, amount, remove }: CartItemProps) => {
           грн
         </div>
       </div>
-      <button className="CartItem__remove" onClick={remove}>
+      <button type="button" className="CartItem__remove" onClick={remove}>
         <CloseIcon color="action" />
       </button>
     </div>
