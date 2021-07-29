@@ -4,40 +4,43 @@ import { Provider } from "react-redux";
 import { createStore } from "redux";
 import reportWebVitals from "./reportWebVitals";
 
-import App, { orderedProductsInterface, products, StateRoot } from "./App";
+import App, { OrderedProductsInterface, products, StateRoot } from "./App";
 import { cardProps } from "./Components/Card";
 
 import "./index.css";
 
 export interface ActionType {
   type: string;
-  payload: orderedProductsInterface | any;
+  payload: OrderedProductsInterface;
+  id: number;
+  product: cardProps;
+  products: products;
 }
 
 function counterReducer(
   state: StateRoot = {
     products: {} as products,
-    orderedProducts: [],
-    favorite: [],
+    orderedProducts: [] as OrderedProductsInterface[], 
+    favorite: [] as cardProps[],
   },
   action: ActionType
-) {
+): StateRoot {
   switch (action.type) {
     case "addToStore":
       return {
         ...state,
-        products: action.payload,
+        products: action.products,
       };
     case "addTOBasket":
-      let arr: orderedProductsInterface[] = [];
+      let arr: OrderedProductsInterface[] = [];
       let check = false;
-      state.orderedProducts.forEach((item: orderedProductsInterface) => {
-        if (action.payload.product.id === item.product.id) {
+      state.orderedProducts.forEach((item: OrderedProductsInterface) => {
+        if (action.payload?.product.id === item.product.id) {
           check = true;
           item.count += action.payload.count;
         }
       });
-      if (!check) {
+      if (!check && action.payload) {
         arr.push(action.payload);
       }
       return {
@@ -48,20 +51,20 @@ function counterReducer(
       return {
         ...state,
         orderedProducts: state.orderedProducts.filter(
-          (i: orderedProductsInterface) => i.product.id !== action.payload
+          (i: OrderedProductsInterface) => i.product.id !== action.id
         ),
       };
     case "clearBasket":
       return {
         ...state,
-        orderedProducts: action.payload,
+        orderedProducts: [],
       };
     case "increment":
       return {
         ...state,
         orderedProducts: state.orderedProducts.map(
-          (item: orderedProductsInterface) => {
-            if (action.payload === item.product.id) {
+          (item: OrderedProductsInterface) => {
+            if (action.id === item.product.id) {
               item.count += 1;
               return item;
             } else {
@@ -74,8 +77,8 @@ function counterReducer(
       return {
         ...state,
         orderedProducts: state.orderedProducts.map(
-          (item: orderedProductsInterface) => {
-            if (action.payload === item.product.id) {
+          (item: OrderedProductsInterface) => {
+            if (action.id === item.product.id) {
               item.count -= 1;
               return item;
             } else {
@@ -86,7 +89,7 @@ function counterReducer(
       };
     case "addToFavorite":
       let array: cardProps[] = [...state.favorite];
-      array.push(action.payload);
+      action.payload && array.push(action.product);
       return {
         ...state,
         favorite: [...array],
@@ -94,7 +97,9 @@ function counterReducer(
     case "removeFavorite":
       return {
         ...state,
-        favorite: state.favorite.filter((item) => item.id !== action.payload),
+        favorite: state.favorite.filter(
+          (item: cardProps) => item.id !== action.id
+        ),
       };
     default:
       return state;
@@ -103,39 +108,38 @@ function counterReducer(
 
 export const removeFavorite = (id: number) => ({
   type: "removeFavorite",
-  payload: id,
+  id,
 });
 export const addToFavorite = (add: cardProps) => ({
   type: "addToFavorite",
-  payload: add,
+  product: add,
 });
 
 export const addToStore = (add: products) => ({
   type: "addToStore",
-  payload: add,
+  products: add,
 });
-export const addToBasket = (add: orderedProductsInterface) => ({
+export const addToBasket = (add: OrderedProductsInterface) => ({
   type: "addTOBasket",
   payload: add,
 });
 
 export const removeFromBasket = (id: number) => ({
   type: "deleteFromBasket",
-  payload: id,
+  id,
 });
 
 export const clearBasket = () => ({
   type: "clearBasket",
-  payload: [],
 });
 
 export const increment = (id: number) => ({
   type: "increment",
-  payload: id,
+  id,
 });
 export const decrement = (id: number) => ({
   type: "decrement",
-  payload: id,
+  id,
 });
 
 const store = createStore(counterReducer);

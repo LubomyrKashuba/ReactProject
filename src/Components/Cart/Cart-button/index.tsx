@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { orderedProductsInterface, StateRoot } from "../../../App";
+import { OrderedProductsInterface, StateRoot } from "../../../App";
 
 import "./Cart-button.scss";
 
@@ -33,7 +33,7 @@ const CartButton = ({ onClick }: CartButtonProps) => {
         />
         <span>
           {store.orderedProducts.reduce(
-            (acc: number, cur: orderedProductsInterface) => {
+            (acc: number, cur: OrderedProductsInterface) => {
               return acc + cur.count;
             },
             0
@@ -43,7 +43,7 @@ const CartButton = ({ onClick }: CartButtonProps) => {
       <div className="CartButton__price">
         <p>
           {store.orderedProducts.reduce(
-            (acc: number, cur: orderedProductsInterface) => {
+            (acc: number, cur: OrderedProductsInterface) => {
               return acc + cur.product.price * cur.count;
             },
             0
