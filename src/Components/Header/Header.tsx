@@ -35,7 +35,7 @@ function Header({ onClick }: any) {
           </ul>
         </div>
         <div className="right">
-          <div className="right-left">ЗАЛИШИТИ ВіДГУК</div>
+          {/* <div className="right-left">ЗАЛИШИТИ ВіДГУК</div> */}
           <Link to="/favorite">
             <ButtonHeader
               icons={<FavoriteBorderIcon></FavoriteBorderIcon>}

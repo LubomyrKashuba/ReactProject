@@ -20,7 +20,7 @@ export interface ActionType {
 function counterReducer(
   state: StateRoot = {
     products: {} as products,
-    orderedProducts: [] as OrderedProductsInterface[], 
+    orderedProducts: [] as OrderedProductsInterface[],
     favorite: [] as cardProps[],
   },
   action: ActionType
@@ -79,7 +79,7 @@ function counterReducer(
         orderedProducts: state.orderedProducts.map(
           (item: OrderedProductsInterface) => {
             if (action.id === item.product.id) {
-              item.count -= 1;
+              item.count > 1 ? (item.count -= 1) : (item.count = 1);
               return item;
             } else {
               return item;
@@ -89,7 +89,7 @@ function counterReducer(
       };
     case "addToFavorite":
       let array: cardProps[] = [...state.favorite];
-      action.payload && array.push(action.product);
+      array.push(action.product);
       return {
         ...state,
         favorite: [...array],
