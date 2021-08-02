@@ -26,7 +26,7 @@ contactTextTwo="Вул. Стрийська, 30"
 <ContactCard
 imgContact="https://www.tomatina.ua/wp-content/themes/tomatina/img/icons/contact_icon_one.svg"
 contactText="м. Львів"
-contactTextTwo="Вул. Кульпарківська, 226 А"
+contactTextTwo="Вул. Кульпарків, 226"
 ></ContactCard>
 <ContactCard
 imgContact="https://www.tomatina.ua/wp-content/themes/tomatina/img/icons/contact_icon_one.svg"

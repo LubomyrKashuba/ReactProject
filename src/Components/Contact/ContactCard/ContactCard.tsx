@@ -22,7 +22,7 @@ function Contact({ imgContact, contactText, contactTextTwo }: ContactProps) {
       <div className="contacts">
         <div className="contact__line">
           <img
-            className="contact__img"
+            className="contact__img__massage"
             src="https://www.tomatina.ua/wp-content/themes/tomatina/img/icons/contact_icon_two.svg"
             alt="img"
           />
@@ -48,7 +48,7 @@ function Contact({ imgContact, contactText, contactTextTwo }: ContactProps) {
       <div className="contacts">
         <div className="contact__line">
           <img
-            className="contact__img"
+            className="contact__img__clock"
             src="https://www.tomatina.ua/wp-content/themes/tomatina/img/icons/contact_icon_foure.svg"
             alt="img"
           />

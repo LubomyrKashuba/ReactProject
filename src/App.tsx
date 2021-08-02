@@ -43,19 +43,18 @@ export interface StateRoot {
 }
 
 function App() {
-  
   const [loading, setLoading] = useState(false);
+  const [sidebar, setSidebar] = React.useState(false);
+  const [cart, setCart] = React.useState(false);
 
   const dispatch = useDispatch();
+  
   useEffect(() => {
     fetch("http://localhost:8000/")
       .then((res) => res.json())
       .then((res) => dispatch(addToStore(res)))
       .then(() => setLoading(!loading));
   }, []);
-  
-  const [sidebar, setSidebar] = React.useState(false);
-  const [cart, setCart] = React.useState(true);
 
   const store = useSelector((state: StateRoot) => {
     return state;
@@ -68,10 +67,10 @@ function App() {
       <Router>
         <CartSidebar
           closeCart={useCartSidebar}
-          className={cart ? "CartSidebar" : "CartSidebar open"}
-          blur={!cart ? "blur" : ""}
+          className={!cart ? "CartSidebar" : "CartSidebar open"}
+          blur={cart ? "blur" : ""}
         />
-        <div className={cart ? "App" : "App disabled"}>
+        <div className={!cart ? "App" : "App disabled"}>
           <Sidebar
             blur={sidebar ? "blur" : ""}
             active={sidebar}

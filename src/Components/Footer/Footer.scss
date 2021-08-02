@@ -1,13 +1,13 @@
 .Footer {
-  height: 150px;
-  width: 90%;
+  width: 80%;
   margin: 20px auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex-wrap: wrap;
+  
 
   .Footer_component {
+  
     background-color: white;
     width: 25%;
     h1,
@@ -55,6 +55,7 @@
 }
 #facebook_button {
 margin: 5px;
+
 }
 #instagram_button {
   margin: 5px;
@@ -63,10 +64,11 @@ margin: 5px;
   height: 150px;
   width: 25%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   font-size: 8px;
-
+  padding-left: 50px;
+  box-sizing: border-box;
   .logo {
     display: flex;
     justify-content: space-between;
@@ -74,10 +76,16 @@ margin: 5px;
 }
 
 @media (max-width: 767px) {
+  .Footer {
+    flex-direction: column;
   .Footer_component{
     width: 50%;
+    text-align: center;
   }
-}
+  .Footer_component_folove {
+    width: 50%;
+  }
+}}
 
 @media (max-width: 480px) {
   .Footer_component{
