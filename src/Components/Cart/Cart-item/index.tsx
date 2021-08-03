@@ -15,7 +15,6 @@ interface CartItemProps {
   remove: () => {};
 }
 const CartItem = ({ id, img, title, price, amount, remove }: CartItemProps) => {
-  // const [count, setCount] = React.useState(amount);
 
   const dispatch = useDispatch();
 
