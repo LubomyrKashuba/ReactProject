@@ -43,7 +43,7 @@ export interface StateRoot {
 }
 
 function App() {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [sidebar, setSidebar] = React.useState(false);
   const [cart, setCart] = React.useState(false);
 
@@ -62,7 +62,7 @@ function App() {
   const useCartSidebar = () => {
     setCart(!cart);
   };
-  if (loading) {
+  if (!loading) {
     return (
       <Router>
         <CartSidebar
