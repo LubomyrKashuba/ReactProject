@@ -8,7 +8,12 @@ import MenuHover from "./Menu/MunuHover";
 import { Link } from "react-router-dom";
 import ButtonHeader from "./ButtonHeader/Index";
 
-function Header({ onClick }: any) {
+interface HeaderProps{
+  onClick:()=>void
+}
+
+
+function Header({ onClick }:HeaderProps) {
   return (
     <div className="Header">
       <header>

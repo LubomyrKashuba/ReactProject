@@ -4,10 +4,56 @@
   align-items: flex-end;
   position: absolute;
   top: 200px;
-  left: -100px;
+  left: -220px;
   background-color: rgb(241, 241, 241);
   flex-wrap: wrap;
-  width: 1200px;
+  width: 1400px;
   opacity: 0.4;
-  transition: .7s;
+  transition: 0.7s;
+}
+
+// @media (min-width: 1200px) {
+//   .MenuButtonHeader:hover {
+//     overflow: visible;
+//     .MenuHover {
+//       top: 100px;
+//       opacity: 1;
+//     }
+//   }
+// }
+
+@media (max-width: 1650px) {
+  
+  .MenuHover {
+    width: 1200px;
+    left: -120px;
+  }
+}
+
+
+
+@media (max-width: 1199px) {
+  .MenuHover {
+    width: 800px;
+    left: -110px;
+  }
+}
+@media (max-width: 991px) {
+  .MenuHover {
+    width: 800px;
+    left: -160px;
+  }
+}
+@media (max-width: 767px) {
+  .MenuHover {
+    width: 600px;
+    left: -240px;
+  }
+}
+
+@media (max-width: 480px) {
+  .MenuHover {
+    width: 400px;
+    left: -195px;
+  }
 }
