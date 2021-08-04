@@ -7,7 +7,67 @@
   flex-direction: column;
   justify-content: space-between;
   margin: 5px;
-
+  &__modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .paper {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 25px;
+      width: 700px;
+      min-height: 400px;
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: 0px 0px 15px 3px rgba(53, 54, 52, 0.26);
+      &__title {
+        text-align: center;
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 1.2em;
+        color: #2d2c2c;
+      }
+      & > div:last-child {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 75%;
+        .paper__img {
+          height: 80%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          img {
+            width: 250px;
+            height: 90%;
+          }
+        }
+        .paper__desc {
+          height: 80%;
+          max-width: 350px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          span {
+            font-size: 20px;
+            font-weight: 700;
+            margin-right: 15px;
+          }
+          div {
+            font-size: 16px;
+            font-weight: 600;
+            color: rgb(59, 59, 59);
+          }
+          .paper__price {
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
   &__favorite {
     display: flex;
     justify-content: flex-end;
@@ -39,7 +99,7 @@
   &__description {
     overflow: hidden;
     text-overflow: ellipsis;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 2;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
@@ -51,7 +111,7 @@
   &__controls {
     display: flex;
     justify-content: space-between;
-    &>div {
+    & > div {
       display: flex;
       align-items: center;
       .decrement,
@@ -80,7 +140,7 @@
         font-size: 16px;
       }
     }
-    &>button{
+    & > button {
       color: #fff;
       background: #599921;
       border: 2px solid #599921;
@@ -93,9 +153,23 @@
       letter-spacing: 0.15em;
       text-transform: uppercase;
       cursor: pointer;
-      &:hover{
+      &:hover {
         background: #fff;
         color: #599921;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .Card__modal {
+    .paper {
+      width: 80%;
+      & > div:last-child {
+        flex-direction: column;
+        .paper__img {
+          display: none;
+        }
       }
     }
   }
