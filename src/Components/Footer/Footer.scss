@@ -70,7 +70,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1199px) {
   .Footer {
     flex-wrap: wrap;
     .Footer_component {
@@ -81,7 +81,7 @@
     }
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .Footer {
     flex-direction: column;
     align-items: center;

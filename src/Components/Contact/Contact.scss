@@ -1,38 +1,44 @@
 .contact {
   margin: 50px auto;
   width: 90%;
- 
+
   .head {
     margin: 50px;
     display: flex;
     justify-content: center;
     font-size: 24px;
-    
+
     .contact__head {
       padding-left: 10px;
       color: #599921;
     }
   }
- 
-  .contact__cards{
+
+  .contact__cards {
     display: flex;
     justify-content: space-around;
- align-items: center;
- 
+    align-items: center;
   }
-  h1{
+  h1 {
     width: 25%;
     text-align: center;
-    
   }
-  h2{
+  h2 {
     font-size: 42px;
   }
-  p{
+  p {
     font-size: 22px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1199px) {
   .contact .contact__cards {
-    display: none;}
+    flex-wrap: wrap;
+    & > h1 {
+      display: none;
+    }
+    .Contact__card {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  }
 }
