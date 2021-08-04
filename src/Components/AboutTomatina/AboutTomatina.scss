@@ -1,5 +1,5 @@
 .AboutUs {
-  margin: 50px auto;
+  margin: 0 auto 50px;
   width: 90%;
   p {
     line-height: 1.5em;
@@ -13,7 +13,7 @@
   }
 }
 .head {
-  margin: 50px;
+  margin-bottom: 50px;
   display: flex;
   justify-content: center;
   .head__tom {
@@ -40,9 +40,26 @@
 .youtube {
   display: flex;
   justify-content: center;
-  height: 600px;
+  height: 400px;
   iframe {
     width: 90%;
     height: 100%;
   }
+}
+@media (max-width: 767px) {
+  .AboutUs__content {
+    flex-direction: column;
+    .content__text {
+      margin: 50px auto;
+      width: 100%;
+      font-size: 14px;
+    }
+    .content__img {
+      &:first-child{
+        display: none;
+      }
+      width: 100%;
+    }
+  }
+
 }

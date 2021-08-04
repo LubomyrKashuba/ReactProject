@@ -44,8 +44,8 @@ export interface StateRoot {
 
 function App() {
   const [loading, setLoading] = useState(true);
-  const [sidebar, setSidebar] = React.useState(false);
-  const [cart, setCart] = React.useState(false);
+  const [sidebar, setSidebar] = useState(false);
+  const [cart, setCart] = useState(false);
 
   const dispatch = useDispatch();
   

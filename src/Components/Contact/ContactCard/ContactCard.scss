@@ -1,43 +1,38 @@
-.Contact__card{
-  
+.Contact__card {
+  width: 30%;
+  border-radius: 6px;
+  background-color: #afabab21;
 
-width: 25%;
-border-radius: 6px;
-background-color: #afabab21;
-
-.contact__img{
-  width: 30px;
- height: 40px;
-
-}
-.contact__img__phone{
-  width: 30px;
-  height: 40px;
-}
-.contact__img__massage{
-  width: 40px;
-  height: 30px;
-}
-.contact__img__clock{
-  width: 35px;
-  height: 35px;
-}
-.contact__line {
- display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.text {
-  padding-left: 10px;
-  width: 50%;
-  .contact__text {
-   
-    font-weight: bold;
-    font-size: 18px;
+  .contact__img {
+    width: 30px;
+    height: 40px;
   }
-  .contact__text__two {
-   
-    font-size: 18px;
+  .contact__img__phone {
+    width: 30px;
+    height: 40px;
   }
-}
+  .contact__img__massage {
+    width: 40px;
+    height: 30px;
+  }
+  .contact__img__clock {
+    width: 35px;
+    height: 35px;
+  }
+  .contact__line {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .text {
+    padding-left: 10px;
+    width: 50%;
+    .contact__text {
+      font-weight: bold;
+      font-size: 18px;
+    }
+    .contact__text__two {
+      font-size: 18px;
+    }
+  }
 }

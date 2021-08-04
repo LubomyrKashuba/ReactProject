@@ -1,13 +1,9 @@
 .zone {
   position: relative;
-  
-  width: 600px;
+  width:100%;
   display: flex;
-  justify-content: space-between;
-  img {
-    position: absolute;
-    top: 20px;
-  }
+  justify-content: center;
+
   .colorzone {
     padding-left: 20px;
     font-size: x-large;
