@@ -15,12 +15,14 @@
     }
   }
   .deliveryTop {
-    width: 85%;
+    width: 90%;
     display: flex;
     justify-content: space-around;
     margin: 30px auto;
   }
   .map {
+    width: 500px;
+    position: relative;
     iframe {
       width: 500px;
       height: 400px;
@@ -59,3 +61,99 @@
     }
   }
 }
+
+@media (max-width: 1200px) {
+  .Delivery {
+    .deliveryTop {
+      flex-wrap: wrap;
+      flex-direction: column;
+      .map {
+        margin: 30px auto;
+      }
+      .zones {
+        padding-left: 140px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .Delivery {
+    .deliveryTop {
+      flex-wrap: wrap;
+      flex-direction: column;
+      .map {
+        margin: 30px auto;
+        iframe {
+          margin: 0;
+        }
+      }
+      .zones {
+        padding: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .Delivery {
+    .payOption {
+      width: 440px;
+      margin: auto;
+      flex-wrap: wrap;
+      .payOptionDown {
+        width: 100%;
+        margin: 20px 0px auto;
+      }
+    }
+    .pay {
+      margin: 0 auto;
+    }
+    .deliveryTop {
+      .map {
+        width: 95%;
+        iframe {
+          width: 330px;
+          height: 300px;
+        }
+      }
+      .zones {
+        width: 95%;
+        .zone {
+          width: 100%;
+        }
+      }
+      img {
+        display: none;
+      }
+    }
+  }
+}
+@media (max-width: 360px) {
+  .Delivery {
+    .deliveryTop {
+      .map {
+        iframe {
+          width: 250px;
+          height: 230px;
+        }
+      }
+    }
+  }
+}
+
+// @media (max-width: 1199px) {
+
+// }
+
+// @media (max-width: 991px) {
+
+// }
+
+// @media (max-width: 767px) {
+
+// }
+
+// @media (max-width: 480px) {
+
+// }

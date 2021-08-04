@@ -4,10 +4,8 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  
 
   .Footer_component {
-  
     background-color: white;
     width: 25%;
     h1,
@@ -17,13 +15,12 @@
       font-family: Arial;
       font-size: 16px;
       color: black;
-     
     }
 
     a:hover {
       color: rgb(89, 153, 33);
     }
- 
+
     .left-ul {
       padding: 10px 15px;
       height: 80px;
@@ -40,22 +37,20 @@
   align-items: center;
 }
 .adress {
- 
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
- #adress_button{
-    padding: 10px;
-    margin-top: -55px;
-  }
+#adress_button {
+  padding: 10px;
+  margin-top: -55px;
+}
 #clock_button {
   padding-left: 13px;
   padding-top: 10px;
 }
 #facebook_button {
-margin: 5px;
-
+  margin: 5px;
 }
 #instagram_button {
   margin: 5px;
@@ -75,20 +70,37 @@ margin: 5px;
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
+  .Footer {
+    flex-wrap: wrap;
+    .Footer_component {
+      width: 300px;
+    }
+    .Footer_component_folove {
+      width: 300px;
+    }
+  }
+}
+@media (max-width: 480px) {
   .Footer {
     flex-direction: column;
-  .Footer_component{
-    width: 50%;
-    text-align: center;
-  }
-  .Footer_component_folove {
-    width: 50%;
-  }
-}}
+    align-items: center;
+    .Footer_component {
+      &:first-child {
+        display: none;
+      }
 
-@media (max-width: 480px) {
-  .Footer_component{
+      text-align: center;
+      #adress_button {
+        padding: 25px;
+      }
+    }
+    .Footer_component_folove {
+      align-items: center;
+      padding: 0;
+    }
+  }
+  .Footer_component {
     width: 100%;
   }
 }
