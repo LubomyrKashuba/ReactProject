@@ -4,7 +4,7 @@ import VacancyCard from "./VacancyCard/VacancyCard";
 function Vacancy() {
   return (
     <div className="Vacancy">
-      <div>
+      <div className='vaconcyTop'>
         Приєднуйся до команди <span>tomatina</span>
       </div>
       <div className="VacancyPosition">

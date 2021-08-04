@@ -9,7 +9,7 @@ function Delivery() {
         Доставка та <span>оплата</span>
       </p>
       <div className="deliveryTop">
-        <div>
+        <div className='zones'>
           <Zone
             srcZone="https://www.tomatina.ua/wp-content/uploads/2020/10/bike_green.svg"
             colorZone="Зелена "
