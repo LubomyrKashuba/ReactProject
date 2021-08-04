@@ -208,11 +208,11 @@ header {
     border: none;
     padding: 20px;
     font-size: 16px;
-    transition: .3s;
+    transition: 0.3s;
+    border: 2px solid rgb(89, 153, 33);
     &:hover {
       color: rgb(89, 153, 33);
       background-color: rgb(233, 233, 233);
-      border: 2px solid rgb(89, 153, 33);
     }
   }
   textarea {
@@ -269,6 +269,16 @@ header {
       .right-left {
         display: none;
       }
+    }
+  }
+  .FeedBack {
+    width: 80%;
+    .col-6 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+    .row {
+      flex-wrap: wrap;
     }
   }
 }
