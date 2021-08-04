@@ -13,7 +13,6 @@ import { useFormik } from "formik";
 import ButtonHeader from "./ButtonHeader/Index";
 
 import "./Header.scss";
-import { Backdrop } from "@material-ui/core";
 
 interface HeaderProps {
   onClick: () => void;
@@ -37,6 +36,7 @@ function Header({ onClick }: HeaderProps) {
         setOpen(false)
         setFeedBack(false);
       }, 2500);
+      formik.resetForm();
     },
   });
 

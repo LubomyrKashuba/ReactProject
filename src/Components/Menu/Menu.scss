@@ -20,7 +20,6 @@
     padding: 3px;
     flex-wrap: wrap;
     li {
-      margin-bottom: 10px;
       text-align: center;
       padding: 10px 0;
       list-style-type: none;
@@ -36,10 +35,9 @@
     &__title {
       font-size: 25px;
     }
-    &__list{
-      li{
+    &__list {
+      li {
         width: 100%;
-        
       }
     }
   }
