@@ -1,0 +1,68 @@
+.sidebar {
+  position: fixed;
+  width: 400px;
+  right: -400px;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  transition: 0.3s;
+  background-image: url(https://www.tomatina.ua/wp-content/themes/tomatina/img/icons/menu_decor.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-color: white;
+  z-index: 80;
+
+  span {
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  button {
+    cursor: pointer;
+    background-color: white;
+    border: none;
+    outline: none;
+    font-size: 40px;
+    color: rgb(126, 126, 126);
+  }
+  a {
+    text-decoration: none;
+    color: grey;
+    height: 50px;
+    width: 190px;
+    margin: 20px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  a:hover {
+    height: 50px;
+    width: 190px;
+    margin: 20px 50px;
+    background-color: rgb(89, 153, 33);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+  }
+}
+.sidebar__active {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 80;
+}
+
+
+@media(max-width:480px){
+  .sidebar__active{
+    width: 100%;
+  }
+}

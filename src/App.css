@@ -1,0 +1,16 @@
+.App {
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  margin-top: 150px;
+}
+.disabled{
+  position: fixed;
+}a{
+  text-decoration: none;
+}
+.spinner{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}

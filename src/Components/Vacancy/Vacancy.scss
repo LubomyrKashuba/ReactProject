@@ -1,0 +1,73 @@
+.Vacancy {
+  width: 100%;
+  text-align: center;
+  font-size: xxx-large;
+  font-weight: 700;
+
+  .VacancyPosition {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1199px) {
+  .Vacancy {
+    p{
+      font-size: 19px;
+    }
+    .vaconcyTop{
+      font-size: 20px;
+    }
+    .VacancyPosition {
+      img{
+        width: 590px;
+      }
+      width: 600px;
+      margin: auto;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .Vacancy {
+    .VacancyPosition {
+      img{
+        width: 440px;
+      }
+      width: 450px;
+      margin: auto;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .Vacancy {
+    .VacancyPosition {
+      img{
+        width: 340px;
+      }
+      width: 350px;
+      margin: auto;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .Vacancy {
+    p{
+      font-size: 14px;
+    }
+    .vaconcyTop{
+      font-size: 16px;
+    }
+    .VacancyPosition {
+      img{
+        width: 240px;
+      }
+      width: 250px;
+      margin: auto;
+    }
+  }
+}

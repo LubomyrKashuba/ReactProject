@@ -1,0 +1,126 @@
+.blur {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.41);
+  height: 100vh;
+  width: 100vw;
+  backdrop-filter: blur(8px);
+  z-index: 10;
+  box-sizing: border-box;
+}
+.CartSidebar {
+  position: fixed;
+  right: -680px;
+  top: 0;
+  bottom: 0;
+  width: 680px;
+  z-index: 110;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  transition: 0.35s;
+  &__header {
+    padding: 40px 90px 20px 50px;
+    height: 90px;
+    .title {
+      position: relative;
+      display: inline-block;
+      width: 50%;
+      vertical-align: middle;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1.2em;
+      color: #2d2c2c;
+    }
+    .clear-basket {
+      cursor: pointer;
+      position: relative;
+      display: inline-block;
+      width: 40%;
+      vertical-align: middle;
+      text-align: right;
+      font-size: 12px;
+      text-transform: uppercase;
+      transition: all 0.3s;
+      background: none;
+      border: none;
+      color: rgb(119, 119, 119);
+      font-weight: 600;
+    }
+  }
+  &__main {
+    .items {
+      padding: 0 50px;
+      display: flex;
+      flex-direction: column;
+      overflow: auto;
+      max-height: 100%;
+      height: calc(100vh - 192px);
+    }
+    .footer {
+      padding: 20px 50px;
+      border-top: 2px solid #599921;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: auto;
+      .totalPrice {
+        color: #2d2c2c;
+        b {
+          font-size: 20px;
+          font-weight: 700;
+        }
+      }
+      a {
+        margin-left: 10px;
+        flex-shrink: 0;
+        color: #fff;
+        background: #599921;
+        border: 2px solid #599921;
+        border-radius: 6px;
+        padding: 18px 30px;
+        display: inline-block;
+        vertical-align: bottom;
+        text-align: center;
+        position: relative;
+        cursor: pointer;
+        text-decoration: none;
+        transition: 0.3s;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+      }
+    }
+  }
+  & > button {
+    position: absolute;
+    right: 50px;
+    top: 35px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+    transition: 0.25s;
+    cursor: pointer;
+    z-index: 2;
+    background: none;
+    border: none;
+  }
+}
+.open {
+  right: 0;
+}
+
+@media (max-width: 767px) {
+  .open{
+    left: 0;
+  }
+  .CartSidebar{
+    width: 100%;
+    right: -100%;
+  }
+}

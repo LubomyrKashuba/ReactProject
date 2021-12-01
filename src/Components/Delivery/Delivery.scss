@@ -1,0 +1,159 @@
+.Delivery {
+  display: flex;
+  flex-wrap: wrap;
+  width: 85%;
+  margin: auto;
+  p {
+    width: 100%;
+    margin: 40px auto;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: 700;
+
+    span {
+      color: rgb(89, 153, 33);
+    }
+  }
+  .deliveryTop {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    margin: 30px auto;
+  }
+  .map {
+    width: 40%;
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: 10px solid rgb(89, 153, 33);
+      border-radius: 20px;
+    }
+  }
+  .pay {
+    margin: 100px 0px;
+    text-align: center;
+    width: 100%;
+    font-size: xxx-large;
+    font-weight: 700;
+    color: rgb(66, 66, 66);
+  }
+  .payOption {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    img {
+      margin-right: 20px;
+    }
+    .payOptionDown {
+      display: flex;
+      width: 30%;
+      margin-bottom: 100px;
+    }
+    .payHeader {
+      font-weight: 500;
+      font-size: x-large;
+    }
+    .payFooter {
+      color: rgb(66, 66, 66);
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .Delivery {
+    .pay {
+      margin: 0 auto 50px;
+    }
+    .deliveryTop {
+      flex-wrap: wrap;
+      flex-direction: column;
+      .map {
+        width: 100%;
+        margin: 30px auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .Delivery {
+    .payOption {
+      width: 440px;
+      margin: auto;
+      flex-wrap: wrap;
+      .payOptionDown {
+        width: 100%;
+        margin: 20px 0px auto;
+      }
+    }
+    .pay {
+      margin: 0 auto;
+    }
+    .deliveryTop {
+      flex-wrap: wrap;
+      flex-direction: column;
+      .map {
+        width: 100%;
+        margin: 30px auto;
+        iframe {
+          margin: 0;
+        }
+      }
+      .zones {
+        padding: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .Delivery {
+    .deliveryTop {
+      .map {
+        width: 95%;
+        iframe {
+          width: 330px;
+          height: 300px;
+        }
+      }
+      .zones {
+        width: 95%;
+        .zone {
+          width: 100%;
+        }
+      }
+      img {
+        display: none;
+      }
+    }
+  }
+}
+@media (max-width: 360px) {
+  .Delivery {
+    .deliveryTop {
+      .map {
+        iframe {
+          width: 250px;
+          height: 230px;
+        }
+      }
+    }
+  }
+}
+
+// @media (max-width: 1199px) {
+
+// }
+
+// @media (max-width: 991px) {
+
+// }
+
+// @media (max-width: 767px) {
+
+// }
+
+// @media (max-width: 480px) {
+
+// }
