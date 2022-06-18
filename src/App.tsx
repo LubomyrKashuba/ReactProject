@@ -56,9 +56,7 @@ function App() {
       .then(() => setLoading(!loading));
   }, []);
 
-  const store = useSelector((state: StateRoot) => {
-    return state;
-  });
+  const store = useSelector((state: StateRoot) => state);
   const useCartSidebar = () => {
     setCart(!cart);
   };
